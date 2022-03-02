@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32126.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "SpaDiego_Analisis", "SpaDiego_Analisis.dtproj", "{714E5CBE-D7F0-4E31-BC91-968B1C581AFB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{714E5CBE-D7F0-4E31-BC91-968B1C581AFB}.Development|Default.ActiveCfg = Development
+		{714E5CBE-D7F0-4E31-BC91-968B1C581AFB}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EF887661-3022-4E20-8C4F-CB2473A2D1D0}
+	EndGlobalSection
+EndGlobal
