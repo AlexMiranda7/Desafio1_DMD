@@ -11,8 +11,8 @@
   DTS:LocaleID="17418"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="4"
-  DTS:VersionGUID="{3D8FB888-C34E-45FD-A510-2E8F9E8A4F5B}">
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{E56C5241-AFDD-4B6E-862F-36CEBA392EFE}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -89,7 +89,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAARZeAiGrcdk+XlcWeQeGJxQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAnkBFk9i3jh5s+dV63W8vpE+JTZNhbYD3EqLNHQ3DdFgAAAAAOgAAAAAIAACAAAACh1q6taPWVFc/nE8T2oM5u3FBFOQCY7cNXy1fVTjMKgRAAAABCOcX3HAcHHmhTeS/cTXB9QAAAAFnpDMRyBdSsuZcSZyRETDFB0vDQJGYQQPk+pt2a46hYaqqqWMscZ+K4aPOYDpl9Q/LSc6fZ8dmEbPLjUVtq1Pk</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAARZeAiGrcdk+XlcWeQeGJxQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADP6yNHf0vujB88lLfZKTmH3u2fP4xwTkyiRnYZIGKlbgAAAAAOgAAAAAIAACAAAADubepwqfmraXFLKImd0dMWGoEV+vGa4XHwWbhCFC0YwxAAAAD1bvE2ohECXqLeqK2rLz0vQAAAAOPY2JxLieCFZkWWq6ZqQO9SD/HEYh9+Cf13MYi6MjYPpSKhAvsJHCd1BLfL/oSULN+HIdcYEdJB+WGx9sQYHgA</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -106,7 +106,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAARZeAiGrcdk+XlcWeQeGJxQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAIw/+P5skZTWzUrdpRtZHHRYzxP8HE2WPVFAKXeF3K+QAAAAAOgAAAAAIAACAAAABmc3LlqUxucksG2XkugXnpp5B6p66nNaEjIbiKk/C6JRAAAACLtd7mCGy2L8gdHexfpXJkQAAAAEVQiUbyInA4khiOAQoDxMzRXUmBCGbqPYp5PxcIZ8n4BpWZFW1mrLVyDcEouLKIklXOBPAqtW/TY5HSHI+vzEs</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAARZeAiGrcdk+XlcWeQeGJxQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADydVN+5Hqhqxksn2UUQ/fVGVx1lkbyW6v5MQrefDUgbwAAAAAOgAAAAAIAACAAAABgahA6UpoMt1JrH2s/HQ8YZytAJSQDg0USCRLBPf/I+BAAAABB23kiF/pZOXVYrUvNd+rLQAAAAHnPl9NTKrXKpaXAAut66EYrm5vSbKDL9XLIWHWcXDdrOD1z5gf/dUfU1qGsv+i8hq0a2tkNtlPDy5nsfHu0Lrg</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -123,7 +123,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAARZeAiGrcdk+XlcWeQeGJxQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACAJSWPHgRHEZS2yJWMHREGaYAYl+rrx0unHb8lEwknugAAAAAOgAAAAAIAACAAAABy1itcwWcV9WFiOce3BS34JloqFKEWf2+DTHHIIwxWPRAAAABXoNi5LZOHrEf7hltRcO4WQAAAAJTTt2nSFH6+CwzraGIVVfu1q/pebIaLvGqWod+7thLU3xo9YPRDvgGW3yjFHSFEZQOw9na3Kk/2MeclEjMHLYo</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAARZeAiGrcdk+XlcWeQeGJxQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAASaBayWFsDu8IhIg+7IDx5fwTEjWGApLkeIp76RBz9YgAAAAAOgAAAAAIAACAAAAAywtenIV0cCY0lDXD0Efbqp9bpyDALFvAMKsrwyJiEYRAAAAAva6TrYsqwybnr3yxi9Mp7QAAAAFEXrIBvFmO0wF5hYsv5F/Vv7glHbW0rN4VokV/7SLQ/awvgNqKdvnjtTWnjxgpKyV7s+TWDT1QqTUkAHhLu59I</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -584,16 +584,10 @@
                   name="Excel Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\Cliente Bi Servicio.Inputs[Excel Destination Input].Columns[Sexo]"
-                      cachedDataType="r8"
-                      cachedName="Sexo"
-                      externalMetadataColumnId="Package\Data Flow Task\Cliente Bi Servicio.Inputs[Excel Destination Input].ExternalColumns[Sexo]"
-                      lineageId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[Sexo]" />
-                    <inputColumn
                       refId="Package\Data Flow Task\Cliente Bi Servicio.Inputs[Excel Destination Input].Columns[Facturado]"
                       cachedDataType="r8"
                       cachedName="Facturado"
-                      cachedSortKeyPosition="1"
+                      cachedSortKeyPosition="-1"
                       externalMetadataColumnId="Package\Data Flow Task\Cliente Bi Servicio.Inputs[Excel Destination Input].ExternalColumns[Facturado]"
                       lineageId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[Facturado]" />
                     <inputColumn
@@ -643,6 +637,20 @@
                       cachedName="Utiliza_Yoga"
                       externalMetadataColumnId="Package\Data Flow Task\Cliente Bi Servicio.Inputs[Excel Destination Input].ExternalColumns[Utiliza Yoga]"
                       lineageId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[Utiliza_Yoga]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Cliente Bi Servicio.Inputs[Excel Destination Input].Columns[Sexo_label]"
+                      cachedDataType="wstr"
+                      cachedLength="6"
+                      cachedName="Sexo_label"
+                      externalMetadataColumnId="Package\Data Flow Task\Cliente Bi Servicio.Inputs[Excel Destination Input].ExternalColumns[Sexo]"
+                      lineageId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[Sexo_label]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Cliente Bi Servicio.Inputs[Excel Destination Input].Columns[Edad]"
+                      cachedDataType="r8"
+                      cachedName="Edad"
+                      cachedSortKeyPosition="-2"
+                      externalMetadataColumnId="Package\Data Flow Task\Cliente Bi Servicio.Inputs[Excel Destination Input].ExternalColumns[Edad]"
+                      lineageId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[Edad]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -691,6 +699,11 @@
                       dataType="wstr"
                       length="255"
                       name="Utiliza Yoga" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Cliente Bi Servicio.Inputs[Excel Destination Input].ExternalColumns[Edad]"
+                      dataType="wstr"
+                      length="255"
+                      name="Edad" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -786,7 +799,7 @@
                       refId="Package\Data Flow Task\Cliente Multi Servicio.Inputs[Excel Destination Input].Columns[Facturado]"
                       cachedDataType="r8"
                       cachedName="Facturado"
-                      cachedSortKeyPosition="1"
+                      cachedSortKeyPosition="-1"
                       externalMetadataColumnId="Package\Data Flow Task\Cliente Multi Servicio.Inputs[Excel Destination Input].ExternalColumns[Facturado]"
                       lineageId="Package\Data Flow Task\Sort 1 1.Outputs[Sort Output].Columns[Facturado]" />
                     <inputColumn
@@ -843,6 +856,13 @@
                       cachedName="Utiliza_Yoga"
                       externalMetadataColumnId="Package\Data Flow Task\Cliente Multi Servicio.Inputs[Excel Destination Input].ExternalColumns[Utiliza Yoga]"
                       lineageId="Package\Data Flow Task\Sort 1 1.Outputs[Sort Output].Columns[Utiliza_Yoga]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Cliente Multi Servicio.Inputs[Excel Destination Input].Columns[Edad]"
+                      cachedDataType="r8"
+                      cachedName="Edad"
+                      cachedSortKeyPosition="-2"
+                      externalMetadataColumnId="Package\Data Flow Task\Cliente Multi Servicio.Inputs[Excel Destination Input].ExternalColumns[Edad]"
+                      lineageId="Package\Data Flow Task\Sort 1 1.Outputs[Sort Output].Columns[Edad]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -891,6 +911,11 @@
                       dataType="wstr"
                       length="255"
                       name="Utiliza Yoga" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Cliente Multi Servicio.Inputs[Excel Destination Input].ExternalColumns[Edad]"
+                      dataType="wstr"
+                      length="255"
+                      name="Edad" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -986,7 +1011,7 @@
                       refId="Package\Data Flow Task\Cliente Servicio Unico.Inputs[Excel Destination Input].Columns[Facturado]"
                       cachedDataType="r8"
                       cachedName="Facturado"
-                      cachedSortKeyPosition="1"
+                      cachedSortKeyPosition="-1"
                       externalMetadataColumnId="Package\Data Flow Task\Cliente Servicio Unico.Inputs[Excel Destination Input].ExternalColumns[Facturado]"
                       lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[Facturado]" />
                     <inputColumn
@@ -1043,6 +1068,13 @@
                       cachedName="Utiliza_Yoga"
                       externalMetadataColumnId="Package\Data Flow Task\Cliente Servicio Unico.Inputs[Excel Destination Input].ExternalColumns[Utiliza Yoga]"
                       lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[Utiliza_Yoga]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Cliente Servicio Unico.Inputs[Excel Destination Input].Columns[Edad]"
+                      cachedDataType="r8"
+                      cachedName="Edad"
+                      cachedSortKeyPosition="-2"
+                      externalMetadataColumnId="Package\Data Flow Task\Cliente Servicio Unico.Inputs[Excel Destination Input].ExternalColumns[Edad]"
+                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[Edad]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1091,6 +1123,11 @@
                       dataType="wstr"
                       length="255"
                       name="Utiliza Yoga" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Cliente Servicio Unico.Inputs[Excel Destination Input].ExternalColumns[Edad]"
+                      dataType="wstr"
+                      length="255"
+                      name="Edad" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -1186,7 +1223,7 @@
                       refId="Package\Data Flow Task\Cliente Todo Servicio.Inputs[Excel Destination Input].Columns[Facturado]"
                       cachedDataType="r8"
                       cachedName="Facturado"
-                      cachedSortKeyPosition="1"
+                      cachedSortKeyPosition="-1"
                       externalMetadataColumnId="Package\Data Flow Task\Cliente Todo Servicio.Inputs[Excel Destination Input].ExternalColumns[Facturado]"
                       lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[Facturado]" />
                     <inputColumn
@@ -1203,12 +1240,6 @@
                       cachedName="Sexo_label"
                       externalMetadataColumnId="Package\Data Flow Task\Cliente Todo Servicio.Inputs[Excel Destination Input].ExternalColumns[Sexo]"
                       lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[Sexo_label]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Cliente Todo Servicio.Inputs[Excel Destination Input].Columns[PromVisit]"
-                      cachedDataType="r8"
-                      cachedName="PromVisit"
-                      externalMetadataColumnId="Package\Data Flow Task\Cliente Todo Servicio.Inputs[Excel Destination Input].ExternalColumns[Visitas Promedio]"
-                      lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[PromVisit]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Cliente Todo Servicio.Inputs[Excel Destination Input].Columns[Servicios_Utilizados]"
                       cachedDataType="r8"
@@ -1243,6 +1274,19 @@
                       cachedName="Utiliza_Yoga"
                       externalMetadataColumnId="Package\Data Flow Task\Cliente Todo Servicio.Inputs[Excel Destination Input].ExternalColumns[Utiliza Yoga]"
                       lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[Utiliza_Yoga]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Cliente Todo Servicio.Inputs[Excel Destination Input].Columns[Visitas_Promedio]"
+                      cachedDataType="r8"
+                      cachedName="Visitas_Promedio"
+                      externalMetadataColumnId="Package\Data Flow Task\Cliente Todo Servicio.Inputs[Excel Destination Input].ExternalColumns[Visitas Promedio]"
+                      lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[Visitas_Promedio]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Cliente Todo Servicio.Inputs[Excel Destination Input].Columns[Edad]"
+                      cachedDataType="r8"
+                      cachedName="Edad"
+                      cachedSortKeyPosition="-2"
+                      externalMetadataColumnId="Package\Data Flow Task\Cliente Todo Servicio.Inputs[Excel Destination Input].ExternalColumns[Edad]"
+                      lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[Edad]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1291,6 +1335,11 @@
                       dataType="wstr"
                       length="255"
                       name="Utiliza Yoga" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Cliente Todo Servicio.Inputs[Excel Destination Input].ExternalColumns[Edad]"
+                      dataType="wstr"
+                      length="255"
+                      name="Edad" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -1891,7 +1940,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
+                          name="NewSortKeyPosition">-2</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -2023,7 +2072,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">1</property>
+                          name="NewSortKeyPosition">-1</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -2193,7 +2242,8 @@
                       refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[Edad]"
                       dataType="r8"
                       lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[Edad]"
-                      name="Edad">
+                      name="Edad"
+                      sortKeyPosition="-2">
                       <properties>
                         <property
                           containsID="true"
@@ -2302,7 +2352,7 @@
                       dataType="r8"
                       lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[Facturado]"
                       name="Facturado"
-                      sortKeyPosition="1">
+                      sortKeyPosition="-1">
                       <properties>
                         <property
                           containsID="true"
@@ -2499,7 +2549,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
+                          name="NewSortKeyPosition">-2</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -2631,7 +2681,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">1</property>
+                          name="NewSortKeyPosition">-1</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -2801,7 +2851,8 @@
                       refId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[Edad]"
                       dataType="r8"
                       lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[Edad]"
-                      name="Edad">
+                      name="Edad"
+                      sortKeyPosition="-2">
                       <properties>
                         <property
                           containsID="true"
@@ -2910,7 +2961,7 @@
                       dataType="r8"
                       lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[Facturado]"
                       name="Facturado"
-                      sortKeyPosition="1">
+                      sortKeyPosition="-1">
                       <properties>
                         <property
                           containsID="true"
@@ -3107,7 +3158,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
+                          name="NewSortKeyPosition">-2</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -3239,7 +3290,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">1</property>
+                          name="NewSortKeyPosition">-1</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -3409,7 +3460,8 @@
                       refId="Package\Data Flow Task\Sort 1 1.Outputs[Sort Output].Columns[Edad]"
                       dataType="r8"
                       lineageId="Package\Data Flow Task\Sort 1 1.Outputs[Sort Output].Columns[Edad]"
-                      name="Edad">
+                      name="Edad"
+                      sortKeyPosition="-2">
                       <properties>
                         <property
                           containsID="true"
@@ -3518,7 +3570,7 @@
                       dataType="r8"
                       lineageId="Package\Data Flow Task\Sort 1 1.Outputs[Sort Output].Columns[Facturado]"
                       name="Facturado"
-                      sortKeyPosition="1">
+                      sortKeyPosition="-1">
                       <properties>
                         <property
                           containsID="true"
@@ -3715,7 +3767,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
+                          name="NewSortKeyPosition">-2</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -3847,7 +3899,7 @@
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">1</property>
+                          name="NewSortKeyPosition">-1</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -4017,7 +4069,8 @@
                       refId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[Edad]"
                       dataType="r8"
                       lineageId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[Edad]"
-                      name="Edad">
+                      name="Edad"
+                      sortKeyPosition="-2">
                       <properties>
                         <property
                           containsID="true"
@@ -4126,7 +4179,7 @@
                       dataType="r8"
                       lineageId="Package\Data Flow Task\Sort 2.Outputs[Sort Output].Columns[Facturado]"
                       name="Facturado"
-                      sortKeyPosition="1">
+                      sortKeyPosition="-1">
                       <properties>
                         <property
                           containsID="true"
@@ -5682,7 +5735,7 @@
         <NodeLayout
           Size="184,42"
           Id="Package\Data Flow Task\Cliente Todo Servicio"
-          TopLeft="26,560" />
+          TopLeft="35,562" />
         <NodeLayout
           Size="159,42"
           Id="Package\Data Flow Task\Conditional Split"
@@ -5933,7 +5986,7 @@
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="1.96711588541667,39.508094645081,79.8991015625,9.7490234375"
+              BoundingBox="1.96711588541669,39.508094645081,79.8991015625,9.7490234375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -6097,18 +6150,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Sort Output]"
-          TopLeft="121,472">
+          TopLeft="125.5,472">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,88"
+              EndConnector="0,90"
               Start="0,0"
-              End="0,80.5">
+              End="0,82.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,80.5" />
+                    End="0,82.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
