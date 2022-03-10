@@ -1,0 +1,1225 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="3/9/2022 10:05:08 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="RMIRANDASV"
+  DTS:CreatorName="RMIRANDASV\Alexander"
+  DTS:DTSID="{DE526819-DBD1-4E31-8FB9-5AEC1DF372DF}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.170"
+  DTS:LocaleID="17418"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{78CD22E0-B554-44A0-BB3E-A5F7D53DB022}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{8D61CB18-FE00-42D1-8F65-437BCDD64EC3}"
+      DTS:ObjectName="Excel Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Alexander\Documents\GitHub\Desafio1_DMD\Floreisteria Fiorella\Analisis\SanMiguel.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[RMIRANDASV\SQLEXPRESS.db_floristeria_fiorella.sa]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{E570BBED-6637-47FF-B73A-5E016FBC8D39}"
+      DTS:ObjectName="RMIRANDASV\SQLEXPRESS.db_floristeria_fiorella.sa">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=RMIRANDASV\SQLEXPRESS;User ID=sa;Initial Catalog=db_floristeria_fiorella;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAARZeAiGrcdk+XlcWeQeGJxQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC9/NaplfHAyyTOW3UI8tiNBzjL12LYX73dnYzPV0bNpAAAAAAOgAAAAAIAACAAAACyIz5fS17b0tdJkZrNIzVgNYcQ0A47Dxt2s1S2YUjEGhAAAAD4I0Y5Okm+gggqkxJSRa66QAAAAP28RBFi5TfzxPgKvBxdTeF2JdbBs5mQZi16xEURRHuhwZDD5AWsZZrDEuvTdRHDklSJAwqHyFfkGjc+61fIAeM</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\DFT San Miguel"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{A869BBC9-85A2-4F9D-BD12-2BE64530A35D}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DFT San Miguel">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\DFT San Miguel\Excel Destination"
+              componentClassID="Microsoft.ExcelDestination"
+              contactInfo="Excel Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Excel Destination"
+              name="Excel Destination"
+              usesDispositions="true">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">Hoja1$</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT San Miguel\Excel Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT San Miguel\Excel Destination.Inputs[Excel Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Excel Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT San Miguel\Excel Destination.Inputs[Excel Destination Input].Columns[Combinacion]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Combinacion"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\DFT San Miguel\Excel Destination.Inputs[Excel Destination Input].ExternalColumns[Combinacion]"
+                      lineageId="Package\DFT San Miguel\Sort.Outputs[Sort Output].Columns[Combinacion]" />
+                    <inputColumn
+                      refId="Package\DFT San Miguel\Excel Destination.Inputs[Excel Destination Input].Columns[id]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="id"
+                      cachedSortKeyPosition="2"
+                      externalMetadataColumnId="Package\DFT San Miguel\Excel Destination.Inputs[Excel Destination Input].ExternalColumns[Cliente]"
+                      lineageId="Package\DFT San Miguel\Sort.Outputs[Sort Output].Columns[id]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT San Miguel\Excel Destination.Inputs[Excel Destination Input].ExternalColumns[Cliente]"
+                      dataType="wstr"
+                      length="255"
+                      name="Cliente" />
+                    <externalMetadataColumn
+                      refId="Package\DFT San Miguel\Excel Destination.Inputs[Excel Destination Input].ExternalColumns[Combinacion]"
+                      dataType="wstr"
+                      length="255"
+                      name="Combinacion" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT San Miguel\Excel Destination.Outputs[Excel Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Excel Destination Error Output"
+                  synchronousInputId="Package\DFT San Miguel\Excel Destination.Inputs[Excel Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT San Miguel\Excel Destination.Outputs[Excel Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT San Miguel\Excel Destination.Outputs[Excel Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT San Miguel\Excel Destination.Outputs[Excel Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT San Miguel\Excel Destination.Outputs[Excel Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT San Miguel\SanMiguel"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="SanMiguel"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[SanMiguel]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT San Miguel\SanMiguel.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[RMIRANDASV\SQLEXPRESS.db_floristeria_fiorella.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[RMIRANDASV\SQLEXPRESS.db_floristeria_fiorella.sa]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].Columns[id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].ExternalColumns[id]"
+                      length="255"
+                      lineageId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].Columns[id]"
+                      name="id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].Columns[Rosas]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].ExternalColumns[Rosas]"
+                      lineageId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].Columns[Rosas]"
+                      name="Rosas"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].Columns[Claveles]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].ExternalColumns[Claveles]"
+                      lineageId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].Columns[Claveles]"
+                      name="Claveles"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].Columns[Macetas]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].ExternalColumns[Macetas]"
+                      lineageId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].Columns[Macetas]"
+                      name="Macetas"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].Columns[Tierra]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].ExternalColumns[Tierra]"
+                      lineageId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].Columns[Tierra]"
+                      name="Tierra"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].Columns[Girasoles]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].ExternalColumns[Girasoles]"
+                      lineageId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].Columns[Girasoles]"
+                      name="Girasoles"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].Columns[Hortensia]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].ExternalColumns[Hortensia]"
+                      lineageId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].Columns[Hortensia]"
+                      name="Hortensia"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].Columns[Globos]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].ExternalColumns[Globos]"
+                      lineageId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].Columns[Globos]"
+                      name="Globos"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].Columns[Tarjetas]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].ExternalColumns[Tarjetas]"
+                      lineageId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].Columns[Tarjetas]"
+                      name="Tarjetas"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].Columns[fOrquídias]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].ExternalColumns[fOrquídias]"
+                      lineageId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].Columns[fOrquídias]"
+                      name="fOrquídias"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].Columns[Carmesí]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].ExternalColumns[Carmesí]"
+                      lineageId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].Columns[Carmesí]"
+                      name="Carmesí"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].Columns[Lirios]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].ExternalColumns[Lirios]"
+                      lineageId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].Columns[Lirios]"
+                      name="Lirios"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].Columns[Aurora]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].ExternalColumns[Aurora]"
+                      lineageId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].Columns[Aurora]"
+                      name="Aurora"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].Columns[Tulipanes]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].ExternalColumns[Tulipanes]"
+                      lineageId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].Columns[Tulipanes]"
+                      name="Tulipanes"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].Columns[Listón]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].ExternalColumns[Listón]"
+                      lineageId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].Columns[Listón]"
+                      name="Listón"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].Columns[Combinacion]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].ExternalColumns[Combinacion]"
+                      length="255"
+                      lineageId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].Columns[Combinacion]"
+                      name="Combinacion"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].ExternalColumns[id]"
+                      dataType="wstr"
+                      length="255"
+                      name="id" />
+                    <externalMetadataColumn
+                      refId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].ExternalColumns[Rosas]"
+                      dataType="r8"
+                      name="Rosas" />
+                    <externalMetadataColumn
+                      refId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].ExternalColumns[Claveles]"
+                      dataType="r8"
+                      name="Claveles" />
+                    <externalMetadataColumn
+                      refId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].ExternalColumns[Macetas]"
+                      dataType="r8"
+                      name="Macetas" />
+                    <externalMetadataColumn
+                      refId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].ExternalColumns[Tierra]"
+                      dataType="r8"
+                      name="Tierra" />
+                    <externalMetadataColumn
+                      refId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].ExternalColumns[Girasoles]"
+                      dataType="r8"
+                      name="Girasoles" />
+                    <externalMetadataColumn
+                      refId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].ExternalColumns[Hortensia]"
+                      dataType="r8"
+                      name="Hortensia" />
+                    <externalMetadataColumn
+                      refId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].ExternalColumns[Globos]"
+                      dataType="r8"
+                      name="Globos" />
+                    <externalMetadataColumn
+                      refId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].ExternalColumns[Tarjetas]"
+                      dataType="r8"
+                      name="Tarjetas" />
+                    <externalMetadataColumn
+                      refId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].ExternalColumns[fOrquídias]"
+                      dataType="r8"
+                      name="fOrquídias" />
+                    <externalMetadataColumn
+                      refId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].ExternalColumns[Carmesí]"
+                      dataType="r8"
+                      name="Carmesí" />
+                    <externalMetadataColumn
+                      refId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].ExternalColumns[Lirios]"
+                      dataType="r8"
+                      name="Lirios" />
+                    <externalMetadataColumn
+                      refId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].ExternalColumns[Aurora]"
+                      dataType="r8"
+                      name="Aurora" />
+                    <externalMetadataColumn
+                      refId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].ExternalColumns[Tulipanes]"
+                      dataType="r8"
+                      name="Tulipanes" />
+                    <externalMetadataColumn
+                      refId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].ExternalColumns[Listón]"
+                      dataType="r8"
+                      name="Listón" />
+                    <externalMetadataColumn
+                      refId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].ExternalColumns[Combinacion]"
+                      dataType="wstr"
+                      length="255"
+                      name="Combinacion" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Error Output].Columns[id]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Error Output].Columns[id]"
+                      name="id" />
+                    <outputColumn
+                      refId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Error Output].Columns[Rosas]"
+                      dataType="r8"
+                      lineageId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Error Output].Columns[Rosas]"
+                      name="Rosas" />
+                    <outputColumn
+                      refId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Error Output].Columns[Claveles]"
+                      dataType="r8"
+                      lineageId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Error Output].Columns[Claveles]"
+                      name="Claveles" />
+                    <outputColumn
+                      refId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Error Output].Columns[Macetas]"
+                      dataType="r8"
+                      lineageId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Error Output].Columns[Macetas]"
+                      name="Macetas" />
+                    <outputColumn
+                      refId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Error Output].Columns[Tierra]"
+                      dataType="r8"
+                      lineageId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Error Output].Columns[Tierra]"
+                      name="Tierra" />
+                    <outputColumn
+                      refId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Error Output].Columns[Girasoles]"
+                      dataType="r8"
+                      lineageId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Error Output].Columns[Girasoles]"
+                      name="Girasoles" />
+                    <outputColumn
+                      refId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Error Output].Columns[Hortensia]"
+                      dataType="r8"
+                      lineageId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Error Output].Columns[Hortensia]"
+                      name="Hortensia" />
+                    <outputColumn
+                      refId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Error Output].Columns[Globos]"
+                      dataType="r8"
+                      lineageId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Error Output].Columns[Globos]"
+                      name="Globos" />
+                    <outputColumn
+                      refId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Error Output].Columns[Tarjetas]"
+                      dataType="r8"
+                      lineageId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Error Output].Columns[Tarjetas]"
+                      name="Tarjetas" />
+                    <outputColumn
+                      refId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Error Output].Columns[fOrquídias]"
+                      dataType="r8"
+                      lineageId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Error Output].Columns[fOrquídias]"
+                      name="fOrquídias" />
+                    <outputColumn
+                      refId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Error Output].Columns[Carmesí]"
+                      dataType="r8"
+                      lineageId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Error Output].Columns[Carmesí]"
+                      name="Carmesí" />
+                    <outputColumn
+                      refId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Error Output].Columns[Lirios]"
+                      dataType="r8"
+                      lineageId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Error Output].Columns[Lirios]"
+                      name="Lirios" />
+                    <outputColumn
+                      refId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Error Output].Columns[Aurora]"
+                      dataType="r8"
+                      lineageId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Error Output].Columns[Aurora]"
+                      name="Aurora" />
+                    <outputColumn
+                      refId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Error Output].Columns[Tulipanes]"
+                      dataType="r8"
+                      lineageId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Error Output].Columns[Tulipanes]"
+                      name="Tulipanes" />
+                    <outputColumn
+                      refId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Error Output].Columns[Listón]"
+                      dataType="r8"
+                      lineageId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Error Output].Columns[Listón]"
+                      name="Listón" />
+                    <outputColumn
+                      refId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Error Output].Columns[Combinacion]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Error Output].Columns[Combinacion]"
+                      name="Combinacion" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT San Miguel\Sort"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\DFT San Miguel\Sort.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT San Miguel\Sort.Inputs[Sort Input].Columns[id]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="id"
+                      lineageId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].Columns[id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT San Miguel\Sort.Inputs[Sort Input].Columns[Rosas]"
+                      cachedDataType="r8"
+                      cachedName="Rosas"
+                      lineageId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].Columns[Rosas]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT San Miguel\Sort.Inputs[Sort Input].Columns[Claveles]"
+                      cachedDataType="r8"
+                      cachedName="Claveles"
+                      lineageId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].Columns[Claveles]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT San Miguel\Sort.Inputs[Sort Input].Columns[Macetas]"
+                      cachedDataType="r8"
+                      cachedName="Macetas"
+                      lineageId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].Columns[Macetas]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT San Miguel\Sort.Inputs[Sort Input].Columns[Tierra]"
+                      cachedDataType="r8"
+                      cachedName="Tierra"
+                      lineageId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].Columns[Tierra]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT San Miguel\Sort.Inputs[Sort Input].Columns[Girasoles]"
+                      cachedDataType="r8"
+                      cachedName="Girasoles"
+                      lineageId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].Columns[Girasoles]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT San Miguel\Sort.Inputs[Sort Input].Columns[Hortensia]"
+                      cachedDataType="r8"
+                      cachedName="Hortensia"
+                      lineageId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].Columns[Hortensia]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT San Miguel\Sort.Inputs[Sort Input].Columns[Globos]"
+                      cachedDataType="r8"
+                      cachedName="Globos"
+                      lineageId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].Columns[Globos]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT San Miguel\Sort.Inputs[Sort Input].Columns[Tarjetas]"
+                      cachedDataType="r8"
+                      cachedName="Tarjetas"
+                      lineageId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].Columns[Tarjetas]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT San Miguel\Sort.Inputs[Sort Input].Columns[fOrquídias]"
+                      cachedDataType="r8"
+                      cachedName="fOrquídias"
+                      lineageId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].Columns[fOrquídias]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT San Miguel\Sort.Inputs[Sort Input].Columns[Carmesí]"
+                      cachedDataType="r8"
+                      cachedName="Carmesí"
+                      lineageId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].Columns[Carmesí]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT San Miguel\Sort.Inputs[Sort Input].Columns[Lirios]"
+                      cachedDataType="r8"
+                      cachedName="Lirios"
+                      lineageId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].Columns[Lirios]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT San Miguel\Sort.Inputs[Sort Input].Columns[Aurora]"
+                      cachedDataType="r8"
+                      cachedName="Aurora"
+                      lineageId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].Columns[Aurora]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT San Miguel\Sort.Inputs[Sort Input].Columns[Tulipanes]"
+                      cachedDataType="r8"
+                      cachedName="Tulipanes"
+                      lineageId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].Columns[Tulipanes]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT San Miguel\Sort.Inputs[Sort Input].Columns[Listón]"
+                      cachedDataType="r8"
+                      cachedName="Listón"
+                      lineageId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].Columns[Listón]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT San Miguel\Sort.Inputs[Sort Input].Columns[Combinacion]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Combinacion"
+                      lineageId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].Columns[Combinacion]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT San Miguel\Sort.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT San Miguel\Sort.Outputs[Sort Output].Columns[id]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT San Miguel\Sort.Outputs[Sort Output].Columns[id]"
+                      name="id"
+                      sortKeyPosition="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].Columns[id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT San Miguel\Sort.Outputs[Sort Output].Columns[Rosas]"
+                      dataType="r8"
+                      lineageId="Package\DFT San Miguel\Sort.Outputs[Sort Output].Columns[Rosas]"
+                      name="Rosas">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].Columns[Rosas]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT San Miguel\Sort.Outputs[Sort Output].Columns[Claveles]"
+                      dataType="r8"
+                      lineageId="Package\DFT San Miguel\Sort.Outputs[Sort Output].Columns[Claveles]"
+                      name="Claveles">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].Columns[Claveles]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT San Miguel\Sort.Outputs[Sort Output].Columns[Macetas]"
+                      dataType="r8"
+                      lineageId="Package\DFT San Miguel\Sort.Outputs[Sort Output].Columns[Macetas]"
+                      name="Macetas">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].Columns[Macetas]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT San Miguel\Sort.Outputs[Sort Output].Columns[Tierra]"
+                      dataType="r8"
+                      lineageId="Package\DFT San Miguel\Sort.Outputs[Sort Output].Columns[Tierra]"
+                      name="Tierra">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].Columns[Tierra]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT San Miguel\Sort.Outputs[Sort Output].Columns[Girasoles]"
+                      dataType="r8"
+                      lineageId="Package\DFT San Miguel\Sort.Outputs[Sort Output].Columns[Girasoles]"
+                      name="Girasoles">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].Columns[Girasoles]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT San Miguel\Sort.Outputs[Sort Output].Columns[Hortensia]"
+                      dataType="r8"
+                      lineageId="Package\DFT San Miguel\Sort.Outputs[Sort Output].Columns[Hortensia]"
+                      name="Hortensia">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].Columns[Hortensia]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT San Miguel\Sort.Outputs[Sort Output].Columns[Globos]"
+                      dataType="r8"
+                      lineageId="Package\DFT San Miguel\Sort.Outputs[Sort Output].Columns[Globos]"
+                      name="Globos">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].Columns[Globos]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT San Miguel\Sort.Outputs[Sort Output].Columns[Tarjetas]"
+                      dataType="r8"
+                      lineageId="Package\DFT San Miguel\Sort.Outputs[Sort Output].Columns[Tarjetas]"
+                      name="Tarjetas">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].Columns[Tarjetas]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT San Miguel\Sort.Outputs[Sort Output].Columns[fOrquídias]"
+                      dataType="r8"
+                      lineageId="Package\DFT San Miguel\Sort.Outputs[Sort Output].Columns[fOrquídias]"
+                      name="fOrquídias">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].Columns[fOrquídias]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT San Miguel\Sort.Outputs[Sort Output].Columns[Carmesí]"
+                      dataType="r8"
+                      lineageId="Package\DFT San Miguel\Sort.Outputs[Sort Output].Columns[Carmesí]"
+                      name="Carmesí">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].Columns[Carmesí]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT San Miguel\Sort.Outputs[Sort Output].Columns[Lirios]"
+                      dataType="r8"
+                      lineageId="Package\DFT San Miguel\Sort.Outputs[Sort Output].Columns[Lirios]"
+                      name="Lirios">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].Columns[Lirios]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT San Miguel\Sort.Outputs[Sort Output].Columns[Aurora]"
+                      dataType="r8"
+                      lineageId="Package\DFT San Miguel\Sort.Outputs[Sort Output].Columns[Aurora]"
+                      name="Aurora">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].Columns[Aurora]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT San Miguel\Sort.Outputs[Sort Output].Columns[Tulipanes]"
+                      dataType="r8"
+                      lineageId="Package\DFT San Miguel\Sort.Outputs[Sort Output].Columns[Tulipanes]"
+                      name="Tulipanes">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].Columns[Tulipanes]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT San Miguel\Sort.Outputs[Sort Output].Columns[Listón]"
+                      dataType="r8"
+                      lineageId="Package\DFT San Miguel\Sort.Outputs[Sort Output].Columns[Listón]"
+                      name="Listón">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].Columns[Listón]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT San Miguel\Sort.Outputs[Sort Output].Columns[Combinacion]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT San Miguel\Sort.Outputs[Sort Output].Columns[Combinacion]"
+                      name="Combinacion"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output].Columns[Combinacion]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\DFT San Miguel.Paths[OLE DB Source Output]"
+              endId="Package\DFT San Miguel\Sort.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\DFT San Miguel\SanMiguel.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\DFT San Miguel.Paths[Sort Output]"
+              endId="Package\DFT San Miguel\Excel Destination.Inputs[Excel Destination Input]"
+              name="Sort Output"
+              startId="Package\DFT San Miguel\Sort.Outputs[Sort Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="158,42"
+          Id="Package\DFT San Miguel"
+          TopLeft="5.5,5.5" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\DFT San Miguel">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="131,42"
+          Id="Package\DFT San Miguel\SanMiguel"
+          TopLeft="241,41" />
+        <NodeLayout
+          Size="164,42"
+          Id="Package\DFT San Miguel\Excel Destination"
+          TopLeft="243,327" />
+        <NodeLayout
+          Size="99,42"
+          Id="Package\DFT San Miguel\Sort"
+          TopLeft="236,125" />
+        <EdgeLayout
+          Id="Package\DFT San Miguel.Paths[OLE DB Source Output]"
+          TopLeft="306.5,83">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-21,42"
+              Start="0,0"
+              End="-21,34.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17"
+                    Point2="0,21"
+                    Point3="-4,21" />
+                  <mssgle:LineSegment
+                    End="-17,21" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-17,21"
+                    Point2="-21,21"
+                    Point3="-21,25" />
+                  <mssgle:LineSegment
+                    End="-21,34.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT San Miguel.Paths[Sort Output]"
+          TopLeft="285.5,167">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="39.5,160"
+              Start="0,0"
+              End="39.5,152.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,76" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,76"
+                    Point2="0,80"
+                    Point3="4,80" />
+                  <mssgle:LineSegment
+                    End="35.5,80" />
+                  <mssgle:CubicBezierSegment
+                    Point1="35.5,80"
+                    Point2="39.5,80"
+                    Point3="39.5,84" />
+                  <mssgle:LineSegment
+                    End="39.5,152.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT San Miguel\SanMiguel">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT San Miguel\Excel Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
