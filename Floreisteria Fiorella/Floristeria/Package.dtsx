@@ -11,8 +11,8 @@
   DTS:LocaleID="17418"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="12"
-  DTS:VersionGUID="{58B89B60-DDB8-43FE-85A3-2C4BA8BC573B}">
+  DTS:VersionBuild="13"
+  DTS:VersionGUID="{CCFB702C-E95B-4FC7-9EA7-107EFF64F614}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -37,7 +37,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="0"
           DTS:ConnectRetryInterval="0"
-          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Alexander\Documents\GitHub\Desafio1_DMD\Floreisteria Fiorella\Analisis\SanSalvador.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Alexander\Documents\GitHub\Desafio1_DMD\Floreisteria Fiorella\Analisis\SanSalvador.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -49,7 +49,19 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="0"
           DTS:ConnectRetryInterval="0"
-          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Alexander\Documents\GitHub\Desafio1_DMD\Floreisteria Fiorella\Analisis\SantaAna.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Alexander\Documents\GitHub\Desafio1_DMD\Floreisteria Fiorella\Analisis\SantaAna.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager 3]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{EA4E8F72-9575-4341-8724-93C3B947CCE6}"
+      DTS:ObjectName="Excel Connection Manager 3">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Alexander\Documents\GitHub\Desafio1_DMD\Floreisteria Fiorella\Analisis\Global.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -65,7 +77,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAARZeAiGrcdk+XlcWeQeGJxQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD0t9AuUUYslz9mK2wzzrq2nPbi8URgOOn7r8x/xi8ROgAAAAAOgAAAAAIAACAAAACe8/bLco9x+N8gbOBEi0e7euDnRhsOITJm3LMVLDWwMBAAAACxwOEa2FMYcUJ/YaLRvHiEQAAAAODn/bPgUAN4Nsd+u+iQRHIyn2p1LjqfRuiR76UdFMV/og4OR28kf+lwTSwsS9uT1a8/wSkZH/wH6LqFgcJnXys</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAARZeAiGrcdk+XlcWeQeGJxQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADhFNuWNOP/mGpcngljGBYOLRgV6eaJzot5iCH9RFfsgAAAAAAOgAAAAAIAACAAAADp/sM6uJTkIRb4tCoGivQ/DY5g98PavqyzdkZUXDKVOxAAAAA/UbpSB26akHwEKBDC358fQAAAAMhC9inoNeWojMBwbwFDXYFZWRv38bzgRx6py2aFTQAYk4jIvdE9SeWcYUq2EazWQiDliwWTUMinc1haTPMydE4</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -73,9 +85,2743 @@
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
+      DTS:refId="Package\DFT GLOBAL"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{0ef6d79a-b563-4bf5-86d6-1c0de8f638c0}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DFT GLOBAL">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\DFT GLOBAL\Excel Global"
+              componentClassID="Microsoft.ExcelDestination"
+              contactInfo="Excel Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Excel Destination"
+              name="Excel Global"
+              usesDispositions="true">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">Hoja1$</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT GLOBAL\Excel Global.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager 3]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager 3]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT GLOBAL\Excel Global.Inputs[Excel Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Excel Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Excel Global.Inputs[Excel Destination Input].Columns[Combinacion]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Combinacion"
+                      cachedSortKeyPosition="2"
+                      externalMetadataColumnId="Package\DFT GLOBAL\Excel Global.Inputs[Excel Destination Input].ExternalColumns[Combinacion]"
+                      lineageId="Package\DFT GLOBAL\Sort.Outputs[Sort Output].Columns[Combinacion]" />
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Excel Global.Inputs[Excel Destination Input].Columns[id]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="id"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\DFT GLOBAL\Excel Global.Inputs[Excel Destination Input].ExternalColumns[Cliente]"
+                      lineageId="Package\DFT GLOBAL\Sort.Outputs[Sort Output].Columns[id]" />
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Excel Global.Inputs[Excel Destination Input].Columns[Rosas]"
+                      cachedDataType="r8"
+                      cachedName="Rosas"
+                      externalMetadataColumnId="Package\DFT GLOBAL\Excel Global.Inputs[Excel Destination Input].ExternalColumns[Rosas]"
+                      lineageId="Package\DFT GLOBAL\Sort.Outputs[Sort Output].Columns[Rosas]" />
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Excel Global.Inputs[Excel Destination Input].Columns[Claveles]"
+                      cachedDataType="r8"
+                      cachedName="Claveles"
+                      externalMetadataColumnId="Package\DFT GLOBAL\Excel Global.Inputs[Excel Destination Input].ExternalColumns[Claveles]"
+                      lineageId="Package\DFT GLOBAL\Sort.Outputs[Sort Output].Columns[Claveles]" />
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Excel Global.Inputs[Excel Destination Input].Columns[Macetas]"
+                      cachedDataType="r8"
+                      cachedName="Macetas"
+                      externalMetadataColumnId="Package\DFT GLOBAL\Excel Global.Inputs[Excel Destination Input].ExternalColumns[Masetas]"
+                      lineageId="Package\DFT GLOBAL\Sort.Outputs[Sort Output].Columns[Macetas]" />
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Excel Global.Inputs[Excel Destination Input].Columns[Tierra]"
+                      cachedDataType="r8"
+                      cachedName="Tierra"
+                      externalMetadataColumnId="Package\DFT GLOBAL\Excel Global.Inputs[Excel Destination Input].ExternalColumns[Tierra]"
+                      lineageId="Package\DFT GLOBAL\Sort.Outputs[Sort Output].Columns[Tierra]" />
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Excel Global.Inputs[Excel Destination Input].Columns[Girasoles]"
+                      cachedDataType="r8"
+                      cachedName="Girasoles"
+                      externalMetadataColumnId="Package\DFT GLOBAL\Excel Global.Inputs[Excel Destination Input].ExternalColumns[Girasoles]"
+                      lineageId="Package\DFT GLOBAL\Sort.Outputs[Sort Output].Columns[Girasoles]" />
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Excel Global.Inputs[Excel Destination Input].Columns[Hortensia]"
+                      cachedDataType="r8"
+                      cachedName="Hortensia"
+                      externalMetadataColumnId="Package\DFT GLOBAL\Excel Global.Inputs[Excel Destination Input].ExternalColumns[Hortencias]"
+                      lineageId="Package\DFT GLOBAL\Sort.Outputs[Sort Output].Columns[Hortensia]" />
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Excel Global.Inputs[Excel Destination Input].Columns[Globos]"
+                      cachedDataType="r8"
+                      cachedName="Globos"
+                      externalMetadataColumnId="Package\DFT GLOBAL\Excel Global.Inputs[Excel Destination Input].ExternalColumns[Globos]"
+                      lineageId="Package\DFT GLOBAL\Sort.Outputs[Sort Output].Columns[Globos]" />
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Excel Global.Inputs[Excel Destination Input].Columns[Tarjetas]"
+                      cachedDataType="r8"
+                      cachedName="Tarjetas"
+                      externalMetadataColumnId="Package\DFT GLOBAL\Excel Global.Inputs[Excel Destination Input].ExternalColumns[Tarjetas]"
+                      lineageId="Package\DFT GLOBAL\Sort.Outputs[Sort Output].Columns[Tarjetas]" />
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Excel Global.Inputs[Excel Destination Input].Columns[fOrquídias]"
+                      cachedDataType="r8"
+                      cachedName="fOrquídias"
+                      externalMetadataColumnId="Package\DFT GLOBAL\Excel Global.Inputs[Excel Destination Input].ExternalColumns[fOrquideas]"
+                      lineageId="Package\DFT GLOBAL\Sort.Outputs[Sort Output].Columns[fOrquídias]" />
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Excel Global.Inputs[Excel Destination Input].Columns[Carmesí]"
+                      cachedDataType="r8"
+                      cachedName="Carmesí"
+                      externalMetadataColumnId="Package\DFT GLOBAL\Excel Global.Inputs[Excel Destination Input].ExternalColumns[Carmesi]"
+                      lineageId="Package\DFT GLOBAL\Sort.Outputs[Sort Output].Columns[Carmesí]" />
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Excel Global.Inputs[Excel Destination Input].Columns[Lirios]"
+                      cachedDataType="r8"
+                      cachedName="Lirios"
+                      externalMetadataColumnId="Package\DFT GLOBAL\Excel Global.Inputs[Excel Destination Input].ExternalColumns[Lirios]"
+                      lineageId="Package\DFT GLOBAL\Sort.Outputs[Sort Output].Columns[Lirios]" />
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Excel Global.Inputs[Excel Destination Input].Columns[Aurora]"
+                      cachedDataType="r8"
+                      cachedName="Aurora"
+                      externalMetadataColumnId="Package\DFT GLOBAL\Excel Global.Inputs[Excel Destination Input].ExternalColumns[Aurora]"
+                      lineageId="Package\DFT GLOBAL\Sort.Outputs[Sort Output].Columns[Aurora]" />
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Excel Global.Inputs[Excel Destination Input].Columns[Tulipanes]"
+                      cachedDataType="r8"
+                      cachedName="Tulipanes"
+                      externalMetadataColumnId="Package\DFT GLOBAL\Excel Global.Inputs[Excel Destination Input].ExternalColumns[Tulipan]"
+                      lineageId="Package\DFT GLOBAL\Sort.Outputs[Sort Output].Columns[Tulipanes]" />
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Excel Global.Inputs[Excel Destination Input].Columns[Listón]"
+                      cachedDataType="r8"
+                      cachedName="Listón"
+                      externalMetadataColumnId="Package\DFT GLOBAL\Excel Global.Inputs[Excel Destination Input].ExternalColumns[Liston]"
+                      lineageId="Package\DFT GLOBAL\Sort.Outputs[Sort Output].Columns[Listón]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT GLOBAL\Excel Global.Inputs[Excel Destination Input].ExternalColumns[Cliente]"
+                      dataType="wstr"
+                      length="255"
+                      name="Cliente" />
+                    <externalMetadataColumn
+                      refId="Package\DFT GLOBAL\Excel Global.Inputs[Excel Destination Input].ExternalColumns[Combinacion]"
+                      dataType="wstr"
+                      length="255"
+                      name="Combinacion" />
+                    <externalMetadataColumn
+                      refId="Package\DFT GLOBAL\Excel Global.Inputs[Excel Destination Input].ExternalColumns[Rosas]"
+                      dataType="wstr"
+                      length="255"
+                      name="Rosas" />
+                    <externalMetadataColumn
+                      refId="Package\DFT GLOBAL\Excel Global.Inputs[Excel Destination Input].ExternalColumns[Claveles]"
+                      dataType="wstr"
+                      length="255"
+                      name="Claveles" />
+                    <externalMetadataColumn
+                      refId="Package\DFT GLOBAL\Excel Global.Inputs[Excel Destination Input].ExternalColumns[Masetas]"
+                      dataType="wstr"
+                      length="255"
+                      name="Masetas" />
+                    <externalMetadataColumn
+                      refId="Package\DFT GLOBAL\Excel Global.Inputs[Excel Destination Input].ExternalColumns[Tierra]"
+                      dataType="wstr"
+                      length="255"
+                      name="Tierra" />
+                    <externalMetadataColumn
+                      refId="Package\DFT GLOBAL\Excel Global.Inputs[Excel Destination Input].ExternalColumns[Girasoles]"
+                      dataType="wstr"
+                      length="255"
+                      name="Girasoles" />
+                    <externalMetadataColumn
+                      refId="Package\DFT GLOBAL\Excel Global.Inputs[Excel Destination Input].ExternalColumns[Hortencias]"
+                      dataType="wstr"
+                      length="255"
+                      name="Hortencias" />
+                    <externalMetadataColumn
+                      refId="Package\DFT GLOBAL\Excel Global.Inputs[Excel Destination Input].ExternalColumns[Globos]"
+                      dataType="wstr"
+                      length="255"
+                      name="Globos" />
+                    <externalMetadataColumn
+                      refId="Package\DFT GLOBAL\Excel Global.Inputs[Excel Destination Input].ExternalColumns[Tarjetas]"
+                      dataType="wstr"
+                      length="255"
+                      name="Tarjetas" />
+                    <externalMetadataColumn
+                      refId="Package\DFT GLOBAL\Excel Global.Inputs[Excel Destination Input].ExternalColumns[fOrquideas]"
+                      dataType="wstr"
+                      length="255"
+                      name="fOrquideas" />
+                    <externalMetadataColumn
+                      refId="Package\DFT GLOBAL\Excel Global.Inputs[Excel Destination Input].ExternalColumns[Carmesi]"
+                      dataType="wstr"
+                      length="255"
+                      name="Carmesi" />
+                    <externalMetadataColumn
+                      refId="Package\DFT GLOBAL\Excel Global.Inputs[Excel Destination Input].ExternalColumns[Lirios]"
+                      dataType="wstr"
+                      length="255"
+                      name="Lirios" />
+                    <externalMetadataColumn
+                      refId="Package\DFT GLOBAL\Excel Global.Inputs[Excel Destination Input].ExternalColumns[Aurora]"
+                      dataType="wstr"
+                      length="255"
+                      name="Aurora" />
+                    <externalMetadataColumn
+                      refId="Package\DFT GLOBAL\Excel Global.Inputs[Excel Destination Input].ExternalColumns[Tulipan]"
+                      dataType="wstr"
+                      length="255"
+                      name="Tulipan" />
+                    <externalMetadataColumn
+                      refId="Package\DFT GLOBAL\Excel Global.Inputs[Excel Destination Input].ExternalColumns[Liston]"
+                      dataType="wstr"
+                      length="255"
+                      name="Liston" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT GLOBAL\Excel Global.Outputs[Excel Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Excel Destination Error Output"
+                  synchronousInputId="Package\DFT GLOBAL\Excel Global.Inputs[Excel Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\Excel Global.Outputs[Excel Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT GLOBAL\Excel Global.Outputs[Excel Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\Excel Global.Outputs[Excel Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT GLOBAL\Excel Global.Outputs[Excel Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT GLOBAL\San Miguel"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="San Miguel"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[SanMiguel]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT GLOBAL\San Miguel.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[RMIRANDASV\SQLEXPRESS.db_floristeria_fiorella.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[RMIRANDASV\SQLEXPRESS.db_floristeria_fiorella.sa]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].Columns[id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].ExternalColumns[id]"
+                      length="255"
+                      lineageId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].Columns[id]"
+                      name="id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].Columns[Rosas]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].ExternalColumns[Rosas]"
+                      lineageId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].Columns[Rosas]"
+                      name="Rosas"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].Columns[Claveles]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].ExternalColumns[Claveles]"
+                      lineageId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].Columns[Claveles]"
+                      name="Claveles"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].Columns[Macetas]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].ExternalColumns[Macetas]"
+                      lineageId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].Columns[Macetas]"
+                      name="Macetas"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].Columns[Tierra]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].ExternalColumns[Tierra]"
+                      lineageId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].Columns[Tierra]"
+                      name="Tierra"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].Columns[Girasoles]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].ExternalColumns[Girasoles]"
+                      lineageId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].Columns[Girasoles]"
+                      name="Girasoles"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].Columns[Hortensia]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].ExternalColumns[Hortensia]"
+                      lineageId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].Columns[Hortensia]"
+                      name="Hortensia"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].Columns[Globos]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].ExternalColumns[Globos]"
+                      lineageId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].Columns[Globos]"
+                      name="Globos"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].Columns[Tarjetas]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].ExternalColumns[Tarjetas]"
+                      lineageId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].Columns[Tarjetas]"
+                      name="Tarjetas"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].Columns[fOrquídias]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].ExternalColumns[fOrquídias]"
+                      lineageId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].Columns[fOrquídias]"
+                      name="fOrquídias"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].Columns[Carmesí]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].ExternalColumns[Carmesí]"
+                      lineageId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].Columns[Carmesí]"
+                      name="Carmesí"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].Columns[Lirios]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].ExternalColumns[Lirios]"
+                      lineageId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].Columns[Lirios]"
+                      name="Lirios"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].Columns[Aurora]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].ExternalColumns[Aurora]"
+                      lineageId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].Columns[Aurora]"
+                      name="Aurora"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].Columns[Tulipanes]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].ExternalColumns[Tulipanes]"
+                      lineageId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].Columns[Tulipanes]"
+                      name="Tulipanes"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].Columns[Listón]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].ExternalColumns[Listón]"
+                      lineageId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].Columns[Listón]"
+                      name="Listón"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].Columns[Combinacion]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].ExternalColumns[Combinacion]"
+                      length="255"
+                      lineageId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].Columns[Combinacion]"
+                      name="Combinacion"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].ExternalColumns[id]"
+                      dataType="wstr"
+                      length="255"
+                      name="id" />
+                    <externalMetadataColumn
+                      refId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].ExternalColumns[Rosas]"
+                      dataType="r8"
+                      name="Rosas" />
+                    <externalMetadataColumn
+                      refId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].ExternalColumns[Claveles]"
+                      dataType="r8"
+                      name="Claveles" />
+                    <externalMetadataColumn
+                      refId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].ExternalColumns[Macetas]"
+                      dataType="r8"
+                      name="Macetas" />
+                    <externalMetadataColumn
+                      refId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].ExternalColumns[Tierra]"
+                      dataType="r8"
+                      name="Tierra" />
+                    <externalMetadataColumn
+                      refId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].ExternalColumns[Girasoles]"
+                      dataType="r8"
+                      name="Girasoles" />
+                    <externalMetadataColumn
+                      refId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].ExternalColumns[Hortensia]"
+                      dataType="r8"
+                      name="Hortensia" />
+                    <externalMetadataColumn
+                      refId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].ExternalColumns[Globos]"
+                      dataType="r8"
+                      name="Globos" />
+                    <externalMetadataColumn
+                      refId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].ExternalColumns[Tarjetas]"
+                      dataType="r8"
+                      name="Tarjetas" />
+                    <externalMetadataColumn
+                      refId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].ExternalColumns[fOrquídias]"
+                      dataType="r8"
+                      name="fOrquídias" />
+                    <externalMetadataColumn
+                      refId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].ExternalColumns[Carmesí]"
+                      dataType="r8"
+                      name="Carmesí" />
+                    <externalMetadataColumn
+                      refId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].ExternalColumns[Lirios]"
+                      dataType="r8"
+                      name="Lirios" />
+                    <externalMetadataColumn
+                      refId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].ExternalColumns[Aurora]"
+                      dataType="r8"
+                      name="Aurora" />
+                    <externalMetadataColumn
+                      refId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].ExternalColumns[Tulipanes]"
+                      dataType="r8"
+                      name="Tulipanes" />
+                    <externalMetadataColumn
+                      refId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].ExternalColumns[Listón]"
+                      dataType="r8"
+                      name="Listón" />
+                    <externalMetadataColumn
+                      refId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].ExternalColumns[Combinacion]"
+                      dataType="wstr"
+                      length="255"
+                      name="Combinacion" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Error Output].Columns[id]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Error Output].Columns[id]"
+                      name="id" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Error Output].Columns[Rosas]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Error Output].Columns[Rosas]"
+                      name="Rosas" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Error Output].Columns[Claveles]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Error Output].Columns[Claveles]"
+                      name="Claveles" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Error Output].Columns[Macetas]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Error Output].Columns[Macetas]"
+                      name="Macetas" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Error Output].Columns[Tierra]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Error Output].Columns[Tierra]"
+                      name="Tierra" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Error Output].Columns[Girasoles]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Error Output].Columns[Girasoles]"
+                      name="Girasoles" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Error Output].Columns[Hortensia]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Error Output].Columns[Hortensia]"
+                      name="Hortensia" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Error Output].Columns[Globos]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Error Output].Columns[Globos]"
+                      name="Globos" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Error Output].Columns[Tarjetas]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Error Output].Columns[Tarjetas]"
+                      name="Tarjetas" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Error Output].Columns[fOrquídias]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Error Output].Columns[fOrquídias]"
+                      name="fOrquídias" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Error Output].Columns[Carmesí]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Error Output].Columns[Carmesí]"
+                      name="Carmesí" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Error Output].Columns[Lirios]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Error Output].Columns[Lirios]"
+                      name="Lirios" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Error Output].Columns[Aurora]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Error Output].Columns[Aurora]"
+                      name="Aurora" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Error Output].Columns[Combinacion]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Error Output].Columns[Combinacion]"
+                      name="Combinacion" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Error Output].Columns[Tulipanes]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Error Output].Columns[Tulipanes]"
+                      name="Tulipanes" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Error Output].Columns[Listón]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Error Output].Columns[Listón]"
+                      name="Listón" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT GLOBAL\San Salvador"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="San Salvador"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[SanSalvador]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT GLOBAL\San Salvador.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[RMIRANDASV\SQLEXPRESS.db_floristeria_fiorella.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[RMIRANDASV\SQLEXPRESS.db_floristeria_fiorella.sa]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].Columns[id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].ExternalColumns[id]"
+                      length="255"
+                      lineageId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].Columns[id]"
+                      name="id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].Columns[Rosas]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].ExternalColumns[Rosas]"
+                      lineageId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].Columns[Rosas]"
+                      name="Rosas"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].Columns[Claveles]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].ExternalColumns[Claveles]"
+                      lineageId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].Columns[Claveles]"
+                      name="Claveles"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].Columns[Macetas]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].ExternalColumns[Macetas]"
+                      lineageId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].Columns[Macetas]"
+                      name="Macetas"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].Columns[Tierra]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].ExternalColumns[Tierra]"
+                      lineageId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].Columns[Tierra]"
+                      name="Tierra"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].Columns[Girasoles]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].ExternalColumns[Girasoles]"
+                      lineageId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].Columns[Girasoles]"
+                      name="Girasoles"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].Columns[Hortensia]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].ExternalColumns[Hortensia]"
+                      lineageId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].Columns[Hortensia]"
+                      name="Hortensia"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].Columns[Globos]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].ExternalColumns[Globos]"
+                      lineageId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].Columns[Globos]"
+                      name="Globos"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].Columns[Tarjetas]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].ExternalColumns[Tarjetas]"
+                      lineageId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].Columns[Tarjetas]"
+                      name="Tarjetas"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].Columns[fOrquídias]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].ExternalColumns[fOrquídias]"
+                      lineageId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].Columns[fOrquídias]"
+                      name="fOrquídias"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].Columns[Carmesí]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].ExternalColumns[Carmesí]"
+                      lineageId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].Columns[Carmesí]"
+                      name="Carmesí"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].Columns[Lirios]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].ExternalColumns[Lirios]"
+                      lineageId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].Columns[Lirios]"
+                      name="Lirios"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].Columns[Aurora]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].ExternalColumns[Aurora]"
+                      lineageId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].Columns[Aurora]"
+                      name="Aurora"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].Columns[Tulipanes]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].ExternalColumns[Tulipanes]"
+                      lineageId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].Columns[Tulipanes]"
+                      name="Tulipanes"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].Columns[Listón]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].ExternalColumns[Listón]"
+                      lineageId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].Columns[Listón]"
+                      name="Listón"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].Columns[Combinacion]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].ExternalColumns[Combinacion]"
+                      length="255"
+                      lineageId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].Columns[Combinacion]"
+                      name="Combinacion"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].ExternalColumns[id]"
+                      dataType="wstr"
+                      length="255"
+                      name="id" />
+                    <externalMetadataColumn
+                      refId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].ExternalColumns[Rosas]"
+                      dataType="r8"
+                      name="Rosas" />
+                    <externalMetadataColumn
+                      refId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].ExternalColumns[Claveles]"
+                      dataType="r8"
+                      name="Claveles" />
+                    <externalMetadataColumn
+                      refId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].ExternalColumns[Macetas]"
+                      dataType="r8"
+                      name="Macetas" />
+                    <externalMetadataColumn
+                      refId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].ExternalColumns[Tierra]"
+                      dataType="r8"
+                      name="Tierra" />
+                    <externalMetadataColumn
+                      refId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].ExternalColumns[Girasoles]"
+                      dataType="r8"
+                      name="Girasoles" />
+                    <externalMetadataColumn
+                      refId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].ExternalColumns[Hortensia]"
+                      dataType="r8"
+                      name="Hortensia" />
+                    <externalMetadataColumn
+                      refId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].ExternalColumns[Globos]"
+                      dataType="r8"
+                      name="Globos" />
+                    <externalMetadataColumn
+                      refId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].ExternalColumns[Tarjetas]"
+                      dataType="r8"
+                      name="Tarjetas" />
+                    <externalMetadataColumn
+                      refId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].ExternalColumns[fOrquídias]"
+                      dataType="r8"
+                      name="fOrquídias" />
+                    <externalMetadataColumn
+                      refId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].ExternalColumns[Carmesí]"
+                      dataType="r8"
+                      name="Carmesí" />
+                    <externalMetadataColumn
+                      refId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].ExternalColumns[Lirios]"
+                      dataType="r8"
+                      name="Lirios" />
+                    <externalMetadataColumn
+                      refId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].ExternalColumns[Aurora]"
+                      dataType="r8"
+                      name="Aurora" />
+                    <externalMetadataColumn
+                      refId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].ExternalColumns[Tulipanes]"
+                      dataType="r8"
+                      name="Tulipanes" />
+                    <externalMetadataColumn
+                      refId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].ExternalColumns[Listón]"
+                      dataType="r8"
+                      name="Listón" />
+                    <externalMetadataColumn
+                      refId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].ExternalColumns[Combinacion]"
+                      dataType="wstr"
+                      length="255"
+                      name="Combinacion" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Error Output].Columns[id]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Error Output].Columns[id]"
+                      name="id" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Error Output].Columns[Rosas]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Error Output].Columns[Rosas]"
+                      name="Rosas" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Error Output].Columns[Claveles]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Error Output].Columns[Claveles]"
+                      name="Claveles" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Error Output].Columns[Macetas]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Error Output].Columns[Macetas]"
+                      name="Macetas" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Error Output].Columns[Tierra]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Error Output].Columns[Tierra]"
+                      name="Tierra" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Error Output].Columns[Girasoles]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Error Output].Columns[Girasoles]"
+                      name="Girasoles" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Error Output].Columns[Hortensia]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Error Output].Columns[Hortensia]"
+                      name="Hortensia" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Error Output].Columns[Globos]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Error Output].Columns[Globos]"
+                      name="Globos" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Error Output].Columns[Tarjetas]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Error Output].Columns[Tarjetas]"
+                      name="Tarjetas" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Error Output].Columns[fOrquídias]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Error Output].Columns[fOrquídias]"
+                      name="fOrquídias" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Error Output].Columns[Carmesí]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Error Output].Columns[Carmesí]"
+                      name="Carmesí" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Error Output].Columns[Lirios]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Error Output].Columns[Lirios]"
+                      name="Lirios" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Error Output].Columns[Aurora]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Error Output].Columns[Aurora]"
+                      name="Aurora" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Error Output].Columns[Combinacion]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Error Output].Columns[Combinacion]"
+                      name="Combinacion" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Error Output].Columns[Tulipanes]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Error Output].Columns[Tulipanes]"
+                      name="Tulipanes" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Error Output].Columns[Listón]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Error Output].Columns[Listón]"
+                      name="Listón" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT GLOBAL\SantaAna"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="SantaAna"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[SantaAna]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT GLOBAL\SantaAna.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[RMIRANDASV\SQLEXPRESS.db_floristeria_fiorella.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[RMIRANDASV\SQLEXPRESS.db_floristeria_fiorella.sa]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].Columns[id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].ExternalColumns[id]"
+                      length="255"
+                      lineageId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].Columns[id]"
+                      name="id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].Columns[Rosas]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].ExternalColumns[Rosas]"
+                      lineageId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].Columns[Rosas]"
+                      name="Rosas"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].Columns[Claveles]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].ExternalColumns[Claveles]"
+                      lineageId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].Columns[Claveles]"
+                      name="Claveles"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].Columns[Macetas]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].ExternalColumns[Macetas]"
+                      lineageId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].Columns[Macetas]"
+                      name="Macetas"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].Columns[Tierra]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].ExternalColumns[Tierra]"
+                      lineageId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].Columns[Tierra]"
+                      name="Tierra"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].Columns[Girasoles]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].ExternalColumns[Girasoles]"
+                      lineageId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].Columns[Girasoles]"
+                      name="Girasoles"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].Columns[Hortensia]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].ExternalColumns[Hortensia]"
+                      lineageId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].Columns[Hortensia]"
+                      name="Hortensia"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].Columns[Globos]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].ExternalColumns[Globos]"
+                      lineageId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].Columns[Globos]"
+                      name="Globos"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].Columns[Tarjetas]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].ExternalColumns[Tarjetas]"
+                      lineageId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].Columns[Tarjetas]"
+                      name="Tarjetas"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].Columns[fOrquídias]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].ExternalColumns[fOrquídias]"
+                      lineageId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].Columns[fOrquídias]"
+                      name="fOrquídias"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].Columns[Carmesí]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].ExternalColumns[Carmesí]"
+                      lineageId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].Columns[Carmesí]"
+                      name="Carmesí"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].Columns[Lirios]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].ExternalColumns[Lirios]"
+                      lineageId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].Columns[Lirios]"
+                      name="Lirios"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].Columns[Aurora]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].ExternalColumns[Aurora]"
+                      lineageId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].Columns[Aurora]"
+                      name="Aurora"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].Columns[Tulipanes]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].ExternalColumns[Tulipanes]"
+                      lineageId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].Columns[Tulipanes]"
+                      name="Tulipanes"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].Columns[Listón]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].ExternalColumns[Listón]"
+                      lineageId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].Columns[Listón]"
+                      name="Listón"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].Columns[Combinacion]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].ExternalColumns[Combinacion]"
+                      length="255"
+                      lineageId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].Columns[Combinacion]"
+                      name="Combinacion"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].ExternalColumns[id]"
+                      dataType="wstr"
+                      length="255"
+                      name="id" />
+                    <externalMetadataColumn
+                      refId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].ExternalColumns[Rosas]"
+                      dataType="r8"
+                      name="Rosas" />
+                    <externalMetadataColumn
+                      refId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].ExternalColumns[Claveles]"
+                      dataType="r8"
+                      name="Claveles" />
+                    <externalMetadataColumn
+                      refId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].ExternalColumns[Macetas]"
+                      dataType="r8"
+                      name="Macetas" />
+                    <externalMetadataColumn
+                      refId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].ExternalColumns[Tierra]"
+                      dataType="r8"
+                      name="Tierra" />
+                    <externalMetadataColumn
+                      refId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].ExternalColumns[Girasoles]"
+                      dataType="r8"
+                      name="Girasoles" />
+                    <externalMetadataColumn
+                      refId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].ExternalColumns[Hortensia]"
+                      dataType="r8"
+                      name="Hortensia" />
+                    <externalMetadataColumn
+                      refId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].ExternalColumns[Globos]"
+                      dataType="r8"
+                      name="Globos" />
+                    <externalMetadataColumn
+                      refId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].ExternalColumns[Tarjetas]"
+                      dataType="r8"
+                      name="Tarjetas" />
+                    <externalMetadataColumn
+                      refId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].ExternalColumns[fOrquídias]"
+                      dataType="r8"
+                      name="fOrquídias" />
+                    <externalMetadataColumn
+                      refId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].ExternalColumns[Carmesí]"
+                      dataType="r8"
+                      name="Carmesí" />
+                    <externalMetadataColumn
+                      refId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].ExternalColumns[Lirios]"
+                      dataType="r8"
+                      name="Lirios" />
+                    <externalMetadataColumn
+                      refId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].ExternalColumns[Aurora]"
+                      dataType="r8"
+                      name="Aurora" />
+                    <externalMetadataColumn
+                      refId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].ExternalColumns[Tulipanes]"
+                      dataType="r8"
+                      name="Tulipanes" />
+                    <externalMetadataColumn
+                      refId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].ExternalColumns[Listón]"
+                      dataType="r8"
+                      name="Listón" />
+                    <externalMetadataColumn
+                      refId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].ExternalColumns[Combinacion]"
+                      dataType="wstr"
+                      length="255"
+                      name="Combinacion" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Error Output].Columns[id]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Error Output].Columns[id]"
+                      name="id" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Error Output].Columns[Rosas]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Error Output].Columns[Rosas]"
+                      name="Rosas" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Error Output].Columns[Claveles]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Error Output].Columns[Claveles]"
+                      name="Claveles" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Error Output].Columns[Macetas]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Error Output].Columns[Macetas]"
+                      name="Macetas" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Error Output].Columns[Tierra]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Error Output].Columns[Tierra]"
+                      name="Tierra" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Error Output].Columns[Girasoles]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Error Output].Columns[Girasoles]"
+                      name="Girasoles" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Error Output].Columns[Hortensia]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Error Output].Columns[Hortensia]"
+                      name="Hortensia" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Error Output].Columns[Globos]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Error Output].Columns[Globos]"
+                      name="Globos" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Error Output].Columns[Tarjetas]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Error Output].Columns[Tarjetas]"
+                      name="Tarjetas" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Error Output].Columns[fOrquídias]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Error Output].Columns[fOrquídias]"
+                      name="fOrquídias" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Error Output].Columns[Carmesí]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Error Output].Columns[Carmesí]"
+                      name="Carmesí" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Error Output].Columns[Lirios]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Error Output].Columns[Lirios]"
+                      name="Lirios" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Error Output].Columns[Aurora]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Error Output].Columns[Aurora]"
+                      name="Aurora" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Error Output].Columns[Combinacion]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Error Output].Columns[Combinacion]"
+                      name="Combinacion" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Error Output].Columns[Tulipanes]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Error Output].Columns[Tulipanes]"
+                      name="Tulipanes" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Error Output].Columns[Listón]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Error Output].Columns[Listón]"
+                      name="Listón" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT GLOBAL\Sort"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\DFT GLOBAL\Sort.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Sort.Inputs[Sort Input].Columns[id]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="id"
+                      lineageId="Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Sort.Inputs[Sort Input].Columns[Rosas]"
+                      cachedDataType="r8"
+                      cachedName="Rosas"
+                      lineageId="Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Rosas]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Sort.Inputs[Sort Input].Columns[Claveles]"
+                      cachedDataType="r8"
+                      cachedName="Claveles"
+                      lineageId="Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Claveles]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Sort.Inputs[Sort Input].Columns[Macetas]"
+                      cachedDataType="r8"
+                      cachedName="Macetas"
+                      lineageId="Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Macetas]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Sort.Inputs[Sort Input].Columns[Tierra]"
+                      cachedDataType="r8"
+                      cachedName="Tierra"
+                      lineageId="Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Tierra]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Sort.Inputs[Sort Input].Columns[Girasoles]"
+                      cachedDataType="r8"
+                      cachedName="Girasoles"
+                      lineageId="Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Girasoles]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Sort.Inputs[Sort Input].Columns[Hortensia]"
+                      cachedDataType="r8"
+                      cachedName="Hortensia"
+                      lineageId="Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Hortensia]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Sort.Inputs[Sort Input].Columns[Globos]"
+                      cachedDataType="r8"
+                      cachedName="Globos"
+                      lineageId="Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Globos]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Sort.Inputs[Sort Input].Columns[Tarjetas]"
+                      cachedDataType="r8"
+                      cachedName="Tarjetas"
+                      lineageId="Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Tarjetas]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Sort.Inputs[Sort Input].Columns[fOrquídias]"
+                      cachedDataType="r8"
+                      cachedName="fOrquídias"
+                      lineageId="Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[fOrquídias]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Sort.Inputs[Sort Input].Columns[Carmesí]"
+                      cachedDataType="r8"
+                      cachedName="Carmesí"
+                      lineageId="Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Carmesí]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Sort.Inputs[Sort Input].Columns[Lirios]"
+                      cachedDataType="r8"
+                      cachedName="Lirios"
+                      lineageId="Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Lirios]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Sort.Inputs[Sort Input].Columns[Aurora]"
+                      cachedDataType="r8"
+                      cachedName="Aurora"
+                      lineageId="Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Aurora]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Sort.Inputs[Sort Input].Columns[Tulipanes]"
+                      cachedDataType="r8"
+                      cachedName="Tulipanes"
+                      lineageId="Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Tulipanes]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Sort.Inputs[Sort Input].Columns[Listón]"
+                      cachedDataType="r8"
+                      cachedName="Listón"
+                      lineageId="Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Listón]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Sort.Inputs[Sort Input].Columns[Combinacion]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Combinacion"
+                      lineageId="Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Combinacion]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">2</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT GLOBAL\Sort.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\Sort.Outputs[Sort Output].Columns[id]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT GLOBAL\Sort.Outputs[Sort Output].Columns[id]"
+                      name="id"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\Sort.Outputs[Sort Output].Columns[Rosas]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\Sort.Outputs[Sort Output].Columns[Rosas]"
+                      name="Rosas">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Rosas]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\Sort.Outputs[Sort Output].Columns[Claveles]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\Sort.Outputs[Sort Output].Columns[Claveles]"
+                      name="Claveles">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Claveles]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\Sort.Outputs[Sort Output].Columns[Macetas]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\Sort.Outputs[Sort Output].Columns[Macetas]"
+                      name="Macetas">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Macetas]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\Sort.Outputs[Sort Output].Columns[Tierra]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\Sort.Outputs[Sort Output].Columns[Tierra]"
+                      name="Tierra">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Tierra]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\Sort.Outputs[Sort Output].Columns[Girasoles]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\Sort.Outputs[Sort Output].Columns[Girasoles]"
+                      name="Girasoles">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Girasoles]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\Sort.Outputs[Sort Output].Columns[Hortensia]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\Sort.Outputs[Sort Output].Columns[Hortensia]"
+                      name="Hortensia">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Hortensia]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\Sort.Outputs[Sort Output].Columns[Globos]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\Sort.Outputs[Sort Output].Columns[Globos]"
+                      name="Globos">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Globos]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\Sort.Outputs[Sort Output].Columns[Tarjetas]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\Sort.Outputs[Sort Output].Columns[Tarjetas]"
+                      name="Tarjetas">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Tarjetas]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\Sort.Outputs[Sort Output].Columns[fOrquídias]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\Sort.Outputs[Sort Output].Columns[fOrquídias]"
+                      name="fOrquídias">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[fOrquídias]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\Sort.Outputs[Sort Output].Columns[Carmesí]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\Sort.Outputs[Sort Output].Columns[Carmesí]"
+                      name="Carmesí">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Carmesí]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\Sort.Outputs[Sort Output].Columns[Lirios]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\Sort.Outputs[Sort Output].Columns[Lirios]"
+                      name="Lirios">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Lirios]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\Sort.Outputs[Sort Output].Columns[Aurora]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\Sort.Outputs[Sort Output].Columns[Aurora]"
+                      name="Aurora">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Aurora]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\Sort.Outputs[Sort Output].Columns[Tulipanes]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\Sort.Outputs[Sort Output].Columns[Tulipanes]"
+                      name="Tulipanes">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Tulipanes]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\Sort.Outputs[Sort Output].Columns[Listón]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\Sort.Outputs[Sort Output].Columns[Listón]"
+                      name="Listón">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Listón]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\Sort.Outputs[Sort Output].Columns[Combinacion]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT GLOBAL\Sort.Outputs[Sort Output].Columns[Combinacion]"
+                      name="Combinacion"
+                      sortKeyPosition="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Combinacion]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT GLOBAL\Union All"
+              componentClassID="Microsoft.UnionAll"
+              contactInfo="Union All;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combines rows from multiple data flows without sorting. For example, add rows back to a data flow after correction of errors. If sorting is important, we recommend using the Merge transformation."
+              name="Union All"
+              version="1">
+              <inputs>
+                <input
+                  refId="Package\DFT GLOBAL\Union All.Inputs[Union All Input 1]"
+                  name="Union All Input 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Union All.Inputs[Union All Input 1].Columns[id]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="id"
+                      lineageId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].Columns[id]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[id]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Union All.Inputs[Union All Input 1].Columns[Rosas]"
+                      cachedDataType="r8"
+                      cachedName="Rosas"
+                      lineageId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].Columns[Rosas]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Rosas]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Union All.Inputs[Union All Input 1].Columns[Claveles]"
+                      cachedDataType="r8"
+                      cachedName="Claveles"
+                      lineageId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].Columns[Claveles]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Claveles]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Union All.Inputs[Union All Input 1].Columns[Macetas]"
+                      cachedDataType="r8"
+                      cachedName="Macetas"
+                      lineageId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].Columns[Macetas]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Macetas]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Union All.Inputs[Union All Input 1].Columns[Tierra]"
+                      cachedDataType="r8"
+                      cachedName="Tierra"
+                      lineageId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].Columns[Tierra]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Tierra]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Union All.Inputs[Union All Input 1].Columns[Girasoles]"
+                      cachedDataType="r8"
+                      cachedName="Girasoles"
+                      lineageId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].Columns[Girasoles]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Girasoles]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Union All.Inputs[Union All Input 1].Columns[Hortensia]"
+                      cachedDataType="r8"
+                      cachedName="Hortensia"
+                      lineageId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].Columns[Hortensia]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Hortensia]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Union All.Inputs[Union All Input 1].Columns[Globos]"
+                      cachedDataType="r8"
+                      cachedName="Globos"
+                      lineageId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].Columns[Globos]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Globos]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Union All.Inputs[Union All Input 1].Columns[Tarjetas]"
+                      cachedDataType="r8"
+                      cachedName="Tarjetas"
+                      lineageId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].Columns[Tarjetas]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Tarjetas]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Union All.Inputs[Union All Input 1].Columns[fOrquídias]"
+                      cachedDataType="r8"
+                      cachedName="fOrquídias"
+                      lineageId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].Columns[fOrquídias]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[fOrquídias]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Union All.Inputs[Union All Input 1].Columns[Carmesí]"
+                      cachedDataType="r8"
+                      cachedName="Carmesí"
+                      lineageId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].Columns[Carmesí]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Carmesí]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Union All.Inputs[Union All Input 1].Columns[Lirios]"
+                      cachedDataType="r8"
+                      cachedName="Lirios"
+                      lineageId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].Columns[Lirios]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Lirios]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Union All.Inputs[Union All Input 1].Columns[Aurora]"
+                      cachedDataType="r8"
+                      cachedName="Aurora"
+                      lineageId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].Columns[Aurora]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Aurora]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Union All.Inputs[Union All Input 1].Columns[Tulipanes]"
+                      cachedDataType="r8"
+                      cachedName="Tulipanes"
+                      lineageId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].Columns[Tulipanes]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Tulipanes]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Union All.Inputs[Union All Input 1].Columns[Listón]"
+                      cachedDataType="r8"
+                      cachedName="Listón"
+                      lineageId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].Columns[Listón]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Listón]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Union All.Inputs[Union All Input 1].Columns[Combinacion]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Combinacion"
+                      lineageId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output].Columns[Combinacion]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Combinacion]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\DFT GLOBAL\Union All.Inputs[Union All Input 2]"
+                  hasSideEffects="true"
+                  name="Union All Input 2">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Union All.Inputs[Union All Input 2].Columns[id]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="id"
+                      lineageId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].Columns[id]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[id]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Union All.Inputs[Union All Input 2].Columns[Rosas]"
+                      cachedDataType="r8"
+                      cachedName="Rosas"
+                      lineageId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].Columns[Rosas]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Rosas]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Union All.Inputs[Union All Input 2].Columns[Claveles]"
+                      cachedDataType="r8"
+                      cachedName="Claveles"
+                      lineageId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].Columns[Claveles]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Claveles]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Union All.Inputs[Union All Input 2].Columns[Macetas]"
+                      cachedDataType="r8"
+                      cachedName="Macetas"
+                      lineageId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].Columns[Macetas]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Macetas]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Union All.Inputs[Union All Input 2].Columns[Tierra]"
+                      cachedDataType="r8"
+                      cachedName="Tierra"
+                      lineageId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].Columns[Tierra]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Tierra]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Union All.Inputs[Union All Input 2].Columns[Girasoles]"
+                      cachedDataType="r8"
+                      cachedName="Girasoles"
+                      lineageId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].Columns[Girasoles]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Girasoles]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Union All.Inputs[Union All Input 2].Columns[Hortensia]"
+                      cachedDataType="r8"
+                      cachedName="Hortensia"
+                      lineageId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].Columns[Hortensia]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Hortensia]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Union All.Inputs[Union All Input 2].Columns[Globos]"
+                      cachedDataType="r8"
+                      cachedName="Globos"
+                      lineageId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].Columns[Globos]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Globos]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Union All.Inputs[Union All Input 2].Columns[Tarjetas]"
+                      cachedDataType="r8"
+                      cachedName="Tarjetas"
+                      lineageId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].Columns[Tarjetas]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Tarjetas]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Union All.Inputs[Union All Input 2].Columns[fOrquídias]"
+                      cachedDataType="r8"
+                      cachedName="fOrquídias"
+                      lineageId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].Columns[fOrquídias]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[fOrquídias]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Union All.Inputs[Union All Input 2].Columns[Carmesí]"
+                      cachedDataType="r8"
+                      cachedName="Carmesí"
+                      lineageId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].Columns[Carmesí]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Carmesí]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Union All.Inputs[Union All Input 2].Columns[Lirios]"
+                      cachedDataType="r8"
+                      cachedName="Lirios"
+                      lineageId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].Columns[Lirios]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Lirios]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Union All.Inputs[Union All Input 2].Columns[Aurora]"
+                      cachedDataType="r8"
+                      cachedName="Aurora"
+                      lineageId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].Columns[Aurora]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Aurora]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Union All.Inputs[Union All Input 2].Columns[Tulipanes]"
+                      cachedDataType="r8"
+                      cachedName="Tulipanes"
+                      lineageId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].Columns[Tulipanes]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Tulipanes]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Union All.Inputs[Union All Input 2].Columns[Listón]"
+                      cachedDataType="r8"
+                      cachedName="Listón"
+                      lineageId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].Columns[Listón]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Listón]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Union All.Inputs[Union All Input 2].Columns[Combinacion]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Combinacion"
+                      lineageId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output].Columns[Combinacion]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Combinacion]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\DFT GLOBAL\Union All.Inputs[Union All Input 3]"
+                  hasSideEffects="true"
+                  name="Union All Input 3">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Union All.Inputs[Union All Input 3].Columns[id]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="id"
+                      lineageId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].Columns[id]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[id]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Union All.Inputs[Union All Input 3].Columns[Rosas]"
+                      cachedDataType="r8"
+                      cachedName="Rosas"
+                      lineageId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].Columns[Rosas]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Rosas]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Union All.Inputs[Union All Input 3].Columns[Claveles]"
+                      cachedDataType="r8"
+                      cachedName="Claveles"
+                      lineageId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].Columns[Claveles]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Claveles]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Union All.Inputs[Union All Input 3].Columns[Macetas]"
+                      cachedDataType="r8"
+                      cachedName="Macetas"
+                      lineageId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].Columns[Macetas]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Macetas]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Union All.Inputs[Union All Input 3].Columns[Tierra]"
+                      cachedDataType="r8"
+                      cachedName="Tierra"
+                      lineageId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].Columns[Tierra]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Tierra]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Union All.Inputs[Union All Input 3].Columns[Girasoles]"
+                      cachedDataType="r8"
+                      cachedName="Girasoles"
+                      lineageId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].Columns[Girasoles]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Girasoles]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Union All.Inputs[Union All Input 3].Columns[Hortensia]"
+                      cachedDataType="r8"
+                      cachedName="Hortensia"
+                      lineageId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].Columns[Hortensia]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Hortensia]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Union All.Inputs[Union All Input 3].Columns[Globos]"
+                      cachedDataType="r8"
+                      cachedName="Globos"
+                      lineageId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].Columns[Globos]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Globos]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Union All.Inputs[Union All Input 3].Columns[Tarjetas]"
+                      cachedDataType="r8"
+                      cachedName="Tarjetas"
+                      lineageId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].Columns[Tarjetas]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Tarjetas]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Union All.Inputs[Union All Input 3].Columns[fOrquídias]"
+                      cachedDataType="r8"
+                      cachedName="fOrquídias"
+                      lineageId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].Columns[fOrquídias]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[fOrquídias]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Union All.Inputs[Union All Input 3].Columns[Carmesí]"
+                      cachedDataType="r8"
+                      cachedName="Carmesí"
+                      lineageId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].Columns[Carmesí]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Carmesí]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Union All.Inputs[Union All Input 3].Columns[Lirios]"
+                      cachedDataType="r8"
+                      cachedName="Lirios"
+                      lineageId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].Columns[Lirios]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Lirios]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Union All.Inputs[Union All Input 3].Columns[Aurora]"
+                      cachedDataType="r8"
+                      cachedName="Aurora"
+                      lineageId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].Columns[Aurora]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Aurora]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Union All.Inputs[Union All Input 3].Columns[Tulipanes]"
+                      cachedDataType="r8"
+                      cachedName="Tulipanes"
+                      lineageId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].Columns[Tulipanes]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Tulipanes]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Union All.Inputs[Union All Input 3].Columns[Listón]"
+                      cachedDataType="r8"
+                      cachedName="Listón"
+                      lineageId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].Columns[Listón]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Listón]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT GLOBAL\Union All.Inputs[Union All Input 3].Columns[Combinacion]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Combinacion"
+                      lineageId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output].Columns[Combinacion]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Combinacion]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\DFT GLOBAL\Union All.Inputs[Union All Input 4]"
+                  dangling="true"
+                  hasSideEffects="true"
+                  name="Union All Input 4">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT GLOBAL\Union All.Outputs[Union All Output 1]"
+                  name="Union All Output 1">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[id]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[id]"
+                      name="id" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Rosas]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Rosas]"
+                      name="Rosas" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Claveles]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Claveles]"
+                      name="Claveles" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Macetas]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Macetas]"
+                      name="Macetas" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Tierra]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Tierra]"
+                      name="Tierra" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Girasoles]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Girasoles]"
+                      name="Girasoles" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Hortensia]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Hortensia]"
+                      name="Hortensia" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Globos]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Globos]"
+                      name="Globos" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Tarjetas]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Tarjetas]"
+                      name="Tarjetas" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[fOrquídias]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[fOrquídias]"
+                      name="fOrquídias" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Carmesí]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Carmesí]"
+                      name="Carmesí" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Lirios]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Lirios]"
+                      name="Lirios" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Aurora]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Aurora]"
+                      name="Aurora" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Tulipanes]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Tulipanes]"
+                      name="Tulipanes" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Listón]"
+                      dataType="r8"
+                      lineageId="Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Listón]"
+                      name="Listón" />
+                    <outputColumn
+                      refId="Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Combinacion]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT GLOBAL\Union All.Outputs[Union All Output 1].Columns[Combinacion]"
+                      name="Combinacion" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\DFT GLOBAL.Paths[OLE DB Source Output]"
+              endId="Package\DFT GLOBAL\Union All.Inputs[Union All Input 1]"
+              name="OLE DB Source Output"
+              startId="Package\DFT GLOBAL\SantaAna.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\DFT GLOBAL.Paths[OLE DB Source Output1]"
+              endId="Package\DFT GLOBAL\Union All.Inputs[Union All Input 2]"
+              name="OLE DB Source Output"
+              startId="Package\DFT GLOBAL\San Miguel.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\DFT GLOBAL.Paths[OLE DB Source Output2]"
+              endId="Package\DFT GLOBAL\Union All.Inputs[Union All Input 3]"
+              name="OLE DB Source Output"
+              startId="Package\DFT GLOBAL\San Salvador.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\DFT GLOBAL.Paths[Sort Output]"
+              endId="Package\DFT GLOBAL\Excel Global.Inputs[Excel Destination Input]"
+              name="Sort Output"
+              startId="Package\DFT GLOBAL\Sort.Outputs[Sort Output]" />
+            <path
+              refId="Package\DFT GLOBAL.Paths[Union All Output 1]"
+              endId="Package\DFT GLOBAL\Sort.Inputs[Sort Input]"
+              name="Union All Output 1"
+              startId="Package\DFT GLOBAL\Union All.Outputs[Union All Output 1]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
       DTS:refId="Package\DFT San Miguel"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
+      DTS:Disabled="True"
       DTS:DTSID="{A869BBC9-85A2-4F9D-BD12-2BE64530A35D}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -1269,6 +4015,7 @@
       DTS:refId="Package\DFT San Salvador"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
+      DTS:Disabled="True"
       DTS:DTSID="{eadd5767-16da-4755-9d61-f4f4f3626aa3}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -2462,6 +5209,7 @@
       DTS:refId="Package\DFT SantaAna"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
+      DTS:Disabled="True"
       DTS:DTSID="{bcc51803-a5c6-466d-ae63-90ef19c8cbaf}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -3676,6 +6424,10 @@
           Size="152,42"
           Id="Package\DFT SantaAna"
           TopLeft="109.5,120" />
+        <NodeLayout
+          Size="147,42"
+          Id="Package\DFT GLOBAL"
+          TopLeft="620,71" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -3687,41 +6439,29 @@
         <NodeLayout
           Size="99,42"
           Id="Package\DFT San Miguel\Sort"
-          TopLeft="236,125" />
+          TopLeft="220,119" />
         <NodeLayout
           Size="164,42"
           Id="Package\DFT San Miguel\Excel San Miguel"
-          TopLeft="224,328" />
+          TopLeft="188,225" />
         <NodeLayout
           Size="131,42"
           Id="Package\DFT San Miguel\SanMiguel"
           TopLeft="211,44" />
         <EdgeLayout
           Id="Package\DFT San Miguel.Paths[Sort Output]"
-          TopLeft="285.5,167">
+          TopLeft="269.75,161">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="20.5,161"
+              EndConnector="0,64"
               Start="0,0"
-              End="20.5,153.5">
+              End="0,56.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,76.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,76.5"
-                    Point2="0,80.5"
-                    Point3="4,80.5" />
-                  <mssgle:LineSegment
-                    End="16.5,80.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="16.5,80.5"
-                    Point2="20.5,80.5"
-                    Point3="20.5,84.5" />
-                  <mssgle:LineSegment
-                    End="20.5,153.5" />
+                    End="0,56.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3732,30 +6472,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DFT San Miguel.Paths[OLE DB Source Output]"
-          TopLeft="276.5,86">
+          TopLeft="273,86">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="9,39"
+              EndConnector="0,33"
               Start="0,0"
-              End="9,31.5">
+              End="0,25.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,15.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,15.5"
-                    Point2="0,19.5"
-                    Point3="4,19.5" />
-                  <mssgle:LineSegment
-                    End="5,19.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="5,19.5"
-                    Point2="9,19.5"
-                    Point3="9,23.5" />
-                  <mssgle:LineSegment
-                    End="9,31.5" />
+                    End="0,25.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3986,6 +6714,235 @@
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\DFT SantaAna\SantaAna">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\DFT GLOBAL">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="99,42"
+          Id="Package\DFT GLOBAL\Sort"
+          TopLeft="220,252" />
+        <NodeLayout
+          Size="141,42"
+          Id="Package\DFT GLOBAL\Excel Global"
+          TopLeft="208,339" />
+        <NodeLayout
+          Size="127,42"
+          Id="Package\DFT GLOBAL\SantaAna"
+          TopLeft="28,31" />
+        <NodeLayout
+          Size="134,42"
+          Id="Package\DFT GLOBAL\San Miguel"
+          TopLeft="189,35" />
+        <NodeLayout
+          Size="145,42"
+          Id="Package\DFT GLOBAL\San Salvador"
+          TopLeft="357,35" />
+        <NodeLayout
+          Size="123,42"
+          Id="Package\DFT GLOBAL\Union All"
+          TopLeft="203,156" />
+        <EdgeLayout
+          Id="Package\DFT GLOBAL.Paths[OLE DB Source Output]"
+          TopLeft="91.5,73">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="144.25,83"
+              Start="0,0"
+              End="144.25,75.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,50.159151193634" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,50.159151193634"
+                    Point2="0,54.159151193634"
+                    Point3="4,54.159151193634" />
+                  <mssgle:LineSegment
+                    End="140.25,54.159151193634" />
+                  <mssgle:CubicBezierSegment
+                    Point1="140.25,54.159151193634"
+                    Point2="144.25,54.159151193634"
+                    Point3="144.25,58.159151193634" />
+                  <mssgle:LineSegment
+                    End="144.25,75.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT GLOBAL.Paths[OLE DB Source Output1]"
+          TopLeft="256,77">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="8.5,79"
+              Start="0,0"
+              End="8.5,71.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,35.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,35.5"
+                    Point2="0,39.5"
+                    Point3="4,39.5" />
+                  <mssgle:LineSegment
+                    End="4.5,39.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="4.5,39.5"
+                    Point2="8.5,39.5"
+                    Point3="8.5,43.5" />
+                  <mssgle:LineSegment
+                    End="8.5,71.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT GLOBAL.Paths[OLE DB Source Output2]"
+          TopLeft="429.5,77">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-136.25,79"
+              Start="0,0"
+              End="-136.25,71.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,47.5490716180371" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,47.5490716180371"
+                    Point2="0,51.5490716180371"
+                    Point3="-4,51.5490716180371" />
+                  <mssgle:LineSegment
+                    End="-132.25,51.5490716180371" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-132.25,51.5490716180371"
+                    Point2="-136.25,51.5490716180371"
+                    Point3="-136.25,55.5490716180371" />
+                  <mssgle:LineSegment
+                    End="-136.25,71.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT GLOBAL.Paths[Union All Output 1]"
+          TopLeft="267,198">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,54"
+              Start="0,0"
+              End="0,46.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,46.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT GLOBAL.Paths[Sort Output]"
+          TopLeft="269.5,294">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="9,45"
+              Start="0,0"
+              End="9,37.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.5"
+                    Point2="0,22.5"
+                    Point3="4,22.5" />
+                  <mssgle:LineSegment
+                    End="5,22.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="5,22.5"
+                    Point2="9,22.5"
+                    Point3="9,26.5" />
+                  <mssgle:LineSegment
+                    End="9,37.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT GLOBAL\Excel Global">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT GLOBAL\San Miguel">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT GLOBAL\San Salvador">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

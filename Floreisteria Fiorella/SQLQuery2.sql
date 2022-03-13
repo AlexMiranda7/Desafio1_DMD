@@ -4,7 +4,7 @@ where Rosas = 1
 select * from dbo.SanMiguel, dbo.SanSalvador, dbo.SantaAna
 
 use db_floristeria_fiorella
-select * from dbo.SanMiguel 
+select * from dbo.SantaAna
 
 select case when Rosas = 1 then 'Rosas,' else ''end +
 case when Claveles = 1 then 'Claveles,' else ''end +
@@ -20,9 +20,9 @@ case when Lirios = 1 then 'Lirios,' else ''end +
 case when Aurora = 1 then 'Aurora,' else ''end +
 case when Tulipanes = 1 then 'Tulipanes,' else ''end +
 case when Listón = 1 then 'Liston' else ''end Combinacion
-from dbo.SanMiguel
+from dbo.SantaAna
 
-update dbo.SanMiguel Set Combinacion =
+update dbo.SantaAna Set Combinacion =
 case when Rosas = 1 then 'Rosas,' else ''end +
 case when Claveles = 1 then 'Claveles,' else ''end +
 case when Macetas = 1 then 'Macetas' else ''end +
