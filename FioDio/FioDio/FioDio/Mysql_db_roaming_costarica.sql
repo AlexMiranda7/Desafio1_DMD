@@ -5,7 +5,7 @@
 -- Servidor: 127.0.0.1
 -- Tiempo de generación: 20-08-2019 a las 21:28:16
 -- Versión del servidor: 10.1.26-MariaDB
--- Versión de PHP: 7.1.9
+-- Versión de PHP: 7.1.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 
 --
 -- Base de datos: `db_roaming_costarica`
+create database db_roaming_costarica;
+use db_roaming_costarica;
 --
 
 -- --------------------------------------------------------

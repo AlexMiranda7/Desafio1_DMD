@@ -12,16 +12,16 @@
   DTS:LocaleID="17418"
   DTS:MaxErrorCount="0"
   DTS:ObjectName="Package1"
-  DTS:VersionBuild="2"
-  DTS:VersionGUID="{4C685943-9B94-4A68-8E0D-8BF763003DCB}">
+  DTS:VersionBuild="9"
+  DTS:VersionGUID="{32F772C3-3B75-4A14-995D-04025866A73A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[DestinationConnectionExcel]"
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
       DTS:CreationName="EXCEL"
-      DTS:DTSID="{7C2F52AF-DCA6-4940-B31B-63A0547DFEB8}"
-      DTS:ObjectName="DestinationConnectionExcel">
+      DTS:DTSID="{C5616748-D630-466B-8DDF-44293CB02BF6}"
+      DTS:ObjectName="Excel Connection Manager">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="0"
@@ -30,15 +30,15 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager 1]"
       DTS:CreationName="EXCEL"
-      DTS:DTSID="{97D42295-5FC6-420B-B8F6-E60B55828439}"
-      DTS:ObjectName="Excel Connection Manager">
+      DTS:DTSID="{6EE1FEA1-460A-4BC6-B287-D3F0691C7D7C}"
+      DTS:ObjectName="Excel Connection Manager 1">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="0"
           DTS:ConnectRetryInterval="0"
-          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Alexander\Documents\GitHub\Desafio1_DMD\FioDio\CLIENTE GUBERNAMENTAL.xls;Extended Properties=&quot;Excel 8.0;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Alexander\Documents\GitHub\Desafio1_DMD\FioDio\CLIENTE GUBERNAMENTAL.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -54,7 +54,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAARZeAiGrcdk+XlcWeQeGJxQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABxD2ehBHK8Fya7i95saHHT5t7VYtByOBxjU9hCTVaoyAAAAAAOgAAAAAIAACAAAAC3Yl60PGy7guO0RlN5D1Jdz7wp+duh+eJt6olG/XpkXBAAAABRKhOfvX1uNmSQiGq4pOzTQAAAANBv0qaTFylnbL3oozBR5saMUHvLlodowWsjwkVr6MJrFyRBXcEOscoR6ApChtnxIIVFbkqPMjIRQz4Joz8yAV4</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAARZeAiGrcdk+XlcWeQeGJxQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABSergvvNTFWftbrM1AMYuADelyS0uh4VpGzZ72EoIq5QAAAAAOgAAAAAIAACAAAAC0QrZXxeG2FvN7exwQjHX3/d6432f5OttiGyRVJtZ/hxAAAACWZWlTqrENaFmXf9R77gctQAAAAIxRVe95VWeuhs3hZc0+farkROO2jJo27FljQBouN5a9c0x2G2KXhMiILsIyy21mTxvFO7nDrHXAs4V5jQGcuvQ</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -513,13 +513,13 @@
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">#{Package\Data Flow Task 1\Aggregate.Outputs[Aggregate Output 1].Columns[idtipocliente]} == 1 &amp;&amp; #{Package\Data Flow Task 1\Aggregate.Outputs[Aggregate Output 1].Columns[idtipocliente]} == 2</property>
+                      name="Expression">#{Package\Data Flow Task 1\Aggregate.Outputs[Aggregate Output 1].Columns[idtipocliente]} == 1</property>
                     <property
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the friendly version of the expression. This expression version uses column names."
                       expressionType="Notify"
-                      name="FriendlyExpression">idtipocliente == 1 &amp;&amp; idtipocliente == 2</property>
+                      name="FriendlyExpression">idtipocliente == 1</property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
@@ -541,17 +541,73 @@
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">#{Package\Data Flow Task 1\Aggregate.Outputs[Aggregate Output 1].Columns[idtipocliente]} == 3 &amp;&amp; #{Package\Data Flow Task 1\Aggregate.Outputs[Aggregate Output 1].Columns[idtipocliente]} == 4</property>
+                      name="Expression">#{Package\Data Flow Task 1\Aggregate.Outputs[Aggregate Output 1].Columns[idtipocliente]} == 3</property>
                     <property
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the friendly version of the expression. This expression version uses column names."
                       expressionType="Notify"
-                      name="FriendlyExpression">idtipocliente == 3 &amp;&amp; idtipocliente == 4</property>
+                      name="FriendlyExpression">idtipocliente == 3</property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
                       name="EvaluationOrder">1</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task 1\Conditional Split.Outputs[Cliente Preferencial y Ejecutivo 2]"
+                  description="Output 3 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Cliente Preferencial y Ejecutivo 2"
+                  synchronousInputId="Package\Data Flow Task 1\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">#{Package\Data Flow Task 1\Aggregate.Outputs[Aggregate Output 1].Columns[idtipocliente]} == 2</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">idtipocliente == 2</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">2</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task 1\Conditional Split.Outputs[Cliente Gubernamental y Turismo 2]"
+                  description="Output 4 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Cliente Gubernamental y Turismo 2"
+                  synchronousInputId="Package\Data Flow Task 1\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">#{Package\Data Flow Task 1\Aggregate.Outputs[Aggregate Output 1].Columns[idtipocliente]} == 4</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">idtipocliente == 4</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">3</property>
                   </properties>
                   <externalMetadataColumns />
                 </output>
@@ -906,8 +962,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task 1\Gubernamental y Turismo.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DestinationConnectionExcel]"
-                  connectionManagerRefId="Package.ConnectionManagers[DestinationConnectionExcel]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager 1]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1047,6 +1103,197 @@
               </outputs>
             </component>
             <component
+              refId="Package\Data Flow Task 1\Gubernamental y Turismo 1"
+              componentClassID="Microsoft.ExcelDestination"
+              contactInfo="Excel Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Excel Destination"
+              name="Gubernamental y Turismo 1"
+              usesDispositions="true"
+              validateExternalMetadata="False">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">Hoja1$</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task 1\Gubernamental y Turismo 1.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager 1]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task 1\Gubernamental y Turismo 1.Inputs[Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Gubernamental y Turismo 1.Inputs[Destination Input].Columns[Nombre Completo]"
+                      cachedDataType="wstr"
+                      cachedLength="501"
+                      cachedName="Nombre Completo"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Gubernamental y Turismo 1.Inputs[Destination Input].ExternalColumns[NOMBRE COMPLETO]"
+                      lineageId="Package\Data Flow Task 1\Derived Column.Outputs[Derived Column Output].Columns[Nombre Completo]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Gubernamental y Turismo 1.Inputs[Destination Input].Columns[Formato DUI]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="Formato DUI"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Gubernamental y Turismo 1.Inputs[Destination Input].ExternalColumns[DUI]"
+                      lineageId="Package\Data Flow Task 1\Derived Column.Outputs[Derived Column Output].Columns[Formato DUI]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Gubernamental y Turismo 1.Inputs[Destination Input].Columns[Formato NIT]"
+                      cachedDataType="wstr"
+                      cachedLength="17"
+                      cachedName="Formato NIT"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Gubernamental y Turismo 1.Inputs[Destination Input].ExternalColumns[NIT]"
+                      lineageId="Package\Data Flow Task 1\Derived Column.Outputs[Derived Column Output].Columns[Formato NIT]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Gubernamental y Turismo 1.Inputs[Destination Input].Columns[Sexo_label]"
+                      cachedDataType="wstr"
+                      cachedLength="9"
+                      cachedName="Sexo_label"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Gubernamental y Turismo 1.Inputs[Destination Input].ExternalColumns[SEXO]"
+                      lineageId="Package\Data Flow Task 1\Derived Column.Outputs[Derived Column Output].Columns[Sexo_label]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Gubernamental y Turismo 1.Inputs[Destination Input].Columns[Formato Telefono]"
+                      cachedDataType="wstr"
+                      cachedLength="9"
+                      cachedName="Formato Telefono"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Gubernamental y Turismo 1.Inputs[Destination Input].ExternalColumns[TELEFONO]"
+                      lineageId="Package\Data Flow Task 1\Derived Column.Outputs[Derived Column Output].Columns[Formato Telefono]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Gubernamental y Turismo 1.Inputs[Destination Input].Columns[Estado_label]"
+                      cachedDataType="wstr"
+                      cachedLength="8"
+                      cachedName="Estado_label"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Gubernamental y Turismo 1.Inputs[Destination Input].ExternalColumns[ESTADO]"
+                      lineageId="Package\Data Flow Task 1\Derived Column.Outputs[Derived Column Output].Columns[Estado_label]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Gubernamental y Turismo 1.Inputs[Destination Input].Columns[Cod. Upper]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="Cod. Upper"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Gubernamental y Turismo 1.Inputs[Destination Input].ExternalColumns[CODIGO CLIENTE]"
+                      lineageId="Package\Data Flow Task 1\Derived Column.Outputs[Derived Column Output].Columns[Cod. Upper]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Gubernamental y Turismo 1.Inputs[Destination Input].Columns[nombre_tipo]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="nombre_tipo"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Gubernamental y Turismo 1.Inputs[Destination Input].ExternalColumns[TIPO CLIENTE]"
+                      lineageId="Package\Data Flow Task 1\Aggregate.Outputs[Aggregate Output 1].Columns[nombre_tipo]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Gubernamental y Turismo 1.Inputs[Destination Input].ExternalColumns[CODIGO CLIENTE]"
+                      dataType="wstr"
+                      length="255"
+                      name="CODIGO CLIENTE" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Gubernamental y Turismo 1.Inputs[Destination Input].ExternalColumns[DUI]"
+                      dataType="wstr"
+                      length="255"
+                      name="DUI" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Gubernamental y Turismo 1.Inputs[Destination Input].ExternalColumns[NIT]"
+                      dataType="wstr"
+                      length="255"
+                      name="NIT" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Gubernamental y Turismo 1.Inputs[Destination Input].ExternalColumns[NOMBRE COMPLETO]"
+                      dataType="wstr"
+                      length="255"
+                      name="NOMBRE COMPLETO" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Gubernamental y Turismo 1.Inputs[Destination Input].ExternalColumns[SEXO]"
+                      dataType="wstr"
+                      length="255"
+                      name="SEXO" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Gubernamental y Turismo 1.Inputs[Destination Input].ExternalColumns[TELEFONO]"
+                      dataType="wstr"
+                      length="255"
+                      name="TELEFONO" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Gubernamental y Turismo 1.Inputs[Destination Input].ExternalColumns[ESTADO]"
+                      dataType="wstr"
+                      length="255"
+                      name="ESTADO" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Gubernamental y Turismo 1.Inputs[Destination Input].ExternalColumns[TIPO CLIENTE]"
+                      dataType="wstr"
+                      length="255"
+                      name="TIPO CLIENTE" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task 1\Gubernamental y Turismo 1.Outputs[Excel Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Excel Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task 1\Gubernamental y Turismo 1.Inputs[Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Gubernamental y Turismo 1.Outputs[Excel Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Gubernamental y Turismo 1.Outputs[Excel Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Gubernamental y Turismo 1.Outputs[Excel Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Gubernamental y Turismo 1.Outputs[Excel Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\Data Flow Task 1\Preferencial y Ejecutivo"
               componentClassID="Microsoft.ExcelDestination"
               contactInfo="Excel Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
@@ -1097,8 +1344,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task 1\Preferencial y Ejecutivo.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DestinationConnectionExcel]"
-                  connectionManagerRefId="Package.ConnectionManagers[DestinationConnectionExcel]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1230,6 +1477,197 @@
                       refId="Package\Data Flow Task 1\Preferencial y Ejecutivo.Outputs[Excel Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\Data Flow Task 1\Preferencial y Ejecutivo.Outputs[Excel Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task 1\Preferencial y Ejecutivo 1"
+              componentClassID="Microsoft.ExcelDestination"
+              contactInfo="Excel Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Excel Destination"
+              name="Preferencial y Ejecutivo 1"
+              usesDispositions="true"
+              validateExternalMetadata="False">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">Hoja1$</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task 1\Preferencial y Ejecutivo 1.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task 1\Preferencial y Ejecutivo 1.Inputs[Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Preferencial y Ejecutivo 1.Inputs[Destination Input].Columns[Nombre Completo]"
+                      cachedDataType="wstr"
+                      cachedLength="501"
+                      cachedName="Nombre Completo"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Preferencial y Ejecutivo 1.Inputs[Destination Input].ExternalColumns[NOMBRE COMPLETO]"
+                      lineageId="Package\Data Flow Task 1\Derived Column.Outputs[Derived Column Output].Columns[Nombre Completo]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Preferencial y Ejecutivo 1.Inputs[Destination Input].Columns[Formato DUI]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="Formato DUI"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Preferencial y Ejecutivo 1.Inputs[Destination Input].ExternalColumns[DUI]"
+                      lineageId="Package\Data Flow Task 1\Derived Column.Outputs[Derived Column Output].Columns[Formato DUI]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Preferencial y Ejecutivo 1.Inputs[Destination Input].Columns[Formato NIT]"
+                      cachedDataType="wstr"
+                      cachedLength="17"
+                      cachedName="Formato NIT"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Preferencial y Ejecutivo 1.Inputs[Destination Input].ExternalColumns[NIT]"
+                      lineageId="Package\Data Flow Task 1\Derived Column.Outputs[Derived Column Output].Columns[Formato NIT]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Preferencial y Ejecutivo 1.Inputs[Destination Input].Columns[Sexo_label]"
+                      cachedDataType="wstr"
+                      cachedLength="9"
+                      cachedName="Sexo_label"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Preferencial y Ejecutivo 1.Inputs[Destination Input].ExternalColumns[SEXO]"
+                      lineageId="Package\Data Flow Task 1\Derived Column.Outputs[Derived Column Output].Columns[Sexo_label]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Preferencial y Ejecutivo 1.Inputs[Destination Input].Columns[Formato Telefono]"
+                      cachedDataType="wstr"
+                      cachedLength="9"
+                      cachedName="Formato Telefono"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Preferencial y Ejecutivo 1.Inputs[Destination Input].ExternalColumns[TELEFONO]"
+                      lineageId="Package\Data Flow Task 1\Derived Column.Outputs[Derived Column Output].Columns[Formato Telefono]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Preferencial y Ejecutivo 1.Inputs[Destination Input].Columns[Estado_label]"
+                      cachedDataType="wstr"
+                      cachedLength="8"
+                      cachedName="Estado_label"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Preferencial y Ejecutivo 1.Inputs[Destination Input].ExternalColumns[ESTADO]"
+                      lineageId="Package\Data Flow Task 1\Derived Column.Outputs[Derived Column Output].Columns[Estado_label]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Preferencial y Ejecutivo 1.Inputs[Destination Input].Columns[Cod. Upper]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="Cod. Upper"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Preferencial y Ejecutivo 1.Inputs[Destination Input].ExternalColumns[CODIGO CLIENTE]"
+                      lineageId="Package\Data Flow Task 1\Derived Column.Outputs[Derived Column Output].Columns[Cod. Upper]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Preferencial y Ejecutivo 1.Inputs[Destination Input].Columns[nombre_tipo]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="nombre_tipo"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Preferencial y Ejecutivo 1.Inputs[Destination Input].ExternalColumns[TIPO CLIENTE]"
+                      lineageId="Package\Data Flow Task 1\Aggregate.Outputs[Aggregate Output 1].Columns[nombre_tipo]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Preferencial y Ejecutivo 1.Inputs[Destination Input].ExternalColumns[CODIGO CLIENTE]"
+                      dataType="wstr"
+                      length="255"
+                      name="CODIGO CLIENTE" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Preferencial y Ejecutivo 1.Inputs[Destination Input].ExternalColumns[DUI]"
+                      dataType="wstr"
+                      length="255"
+                      name="DUI" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Preferencial y Ejecutivo 1.Inputs[Destination Input].ExternalColumns[NIT]"
+                      dataType="wstr"
+                      length="255"
+                      name="NIT" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Preferencial y Ejecutivo 1.Inputs[Destination Input].ExternalColumns[NOMBRE COMPLETO]"
+                      dataType="wstr"
+                      length="255"
+                      name="NOMBRE COMPLETO" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Preferencial y Ejecutivo 1.Inputs[Destination Input].ExternalColumns[SEXO]"
+                      dataType="wstr"
+                      length="255"
+                      name="SEXO" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Preferencial y Ejecutivo 1.Inputs[Destination Input].ExternalColumns[TELEFONO]"
+                      dataType="wstr"
+                      length="255"
+                      name="TELEFONO" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Preferencial y Ejecutivo 1.Inputs[Destination Input].ExternalColumns[ESTADO]"
+                      dataType="wstr"
+                      length="255"
+                      name="ESTADO" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Preferencial y Ejecutivo 1.Inputs[Destination Input].ExternalColumns[TIPO CLIENTE]"
+                      dataType="wstr"
+                      length="255"
+                      name="TIPO CLIENTE" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task 1\Preferencial y Ejecutivo 1.Outputs[Excel Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Excel Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task 1\Preferencial y Ejecutivo 1.Inputs[Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Preferencial y Ejecutivo 1.Outputs[Excel Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Preferencial y Ejecutivo 1.Outputs[Excel Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Preferencial y Ejecutivo 1.Outputs[Excel Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Preferencial y Ejecutivo 1.Outputs[Excel Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -2235,10 +2673,20 @@ FROM            cliente AS cli INNER JOIN
               name="Cliente Gubernamental y Turismo"
               startId="Package\Data Flow Task 1\Conditional Split.Outputs[Cliente Gubernamental y Turismo]" />
             <path
+              refId="Package\Data Flow Task 1.Paths[Cliente Gubernamental y Turismo 2]"
+              endId="Package\Data Flow Task 1\Gubernamental y Turismo 1.Inputs[Destination Input]"
+              name="Cliente Gubernamental y Turismo 2"
+              startId="Package\Data Flow Task 1\Conditional Split.Outputs[Cliente Gubernamental y Turismo 2]" />
+            <path
               refId="Package\Data Flow Task 1.Paths[Cliente Preferencial y Ejecutivo]"
               endId="Package\Data Flow Task 1\Preferencial y Ejecutivo.Inputs[Destination Input]"
               name="Cliente Preferencial y Ejecutivo"
               startId="Package\Data Flow Task 1\Conditional Split.Outputs[Cliente Preferencial y Ejecutivo]" />
+            <path
+              refId="Package\Data Flow Task 1.Paths[Cliente Preferencial y Ejecutivo 2]"
+              endId="Package\Data Flow Task 1\Preferencial y Ejecutivo 1.Inputs[Destination Input]"
+              name="Cliente Preferencial y Ejecutivo 2"
+              startId="Package\Data Flow Task 1\Conditional Split.Outputs[Cliente Preferencial y Ejecutivo 2]" />
             <path
               refId="Package\Data Flow Task 1.Paths[Derived Column Output]"
               endId="Package\Data Flow Task 1\Conditional Split.Inputs[Conditional Split Input]"
@@ -2261,6 +2709,7 @@ FROM            cliente AS cli INNER JOIN
     <DTS:Executable
       DTS:refId="Package\Preparation SQL Task 1"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Disabled="True"
       DTS:DTSID="{75CA2FEA-74E1-498A-9ABA-3411F8A2EA98}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:FailPackageOnFailure="True"
@@ -2335,15 +2784,15 @@ FROM            cliente AS cli INNER JOIN
     design-time-name="Package\Data Flow Task 1">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="142,42"
           Id="Package\Data Flow Task 1\Roaming CR"
           TopLeft="384,39.5" />
         <NodeLayout
-          Size="194,42"
-          Id="Package\Data Flow Task 1\Preferencial y Ejecutivo"
-          TopLeft="188.5,361.5" />
+          Size="159,42"
+          Id="Package\Data Flow Task 1\Conditional Split"
+          TopLeft="450,270" />
         <NodeLayout
           Size="142,42"
           Id="Package\Data Flow Task 1\Roaming HN"
@@ -2352,32 +2801,36 @@ FROM            cliente AS cli INNER JOIN
           Size="123,42"
           Id="Package\Data Flow Task 1\Union All"
           TopLeft="475,123" />
+        <NodeLayout
+          Size="206,42"
+          Id="Package\Data Flow Task 1\Gubernamental y Turismo"
+          TopLeft="698,369" />
+        <NodeLayout
+          Size="158,42"
+          Id="Package\Data Flow Task 1\Derived Column"
+          TopLeft="460.5,192.5" />
+        <NodeLayout
+          Size="130,42"
+          Id="Package\Data Flow Task 1\Aggregate"
+          TopLeft="829,129" />
+        <NodeLayout
+          Size="194,42"
+          Id="Package\Data Flow Task 1\Preferencial y Ejecutivo"
+          TopLeft="133.5,368.5" />
         <EdgeLayout
-          Id="Package\Data Flow Task 1.Paths[ADO NET Source Output]"
-          TopLeft="455,81.5">
+          Id="Package\Data Flow Task 1.Paths[Union All Output 1]"
+          TopLeft="598,147">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="81.5,41.5"
+              EndConnector="231,0"
               Start="0,0"
-              End="81.5,34">
+              End="223.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,16.75" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,16.75"
-                    Point2="0,20.75"
-                    Point3="4,20.75" />
-                  <mssgle:LineSegment
-                    End="77.5,20.75" />
-                  <mssgle:CubicBezierSegment
-                    Point1="77.5,20.75"
-                    Point2="81.5,20.75"
-                    Point3="81.5,24.75" />
-                  <mssgle:LineSegment
-                    End="81.5,34" />
+                    End="223.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2420,74 +2873,6 @@ FROM            cliente AS cli INNER JOIN
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="130,42"
-          Id="Package\Data Flow Task 1\Aggregate"
-          TopLeft="829,129" />
-        <EdgeLayout
-          Id="Package\Data Flow Task 1.Paths[Union All Output 1]"
-          TopLeft="598,147">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="231,0"
-              Start="0,0"
-              End="223.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="223.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="158,42"
-          Id="Package\Data Flow Task 1\Derived Column"
-          TopLeft="460.5,192.5" />
-        <EdgeLayout
-          Id="Package\Data Flow Task 1.Paths[Aggregate Output 1]"
-          TopLeft="829,155.666666666667">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-210.5,57.8333333333333"
-              Start="0,0"
-              End="-203,57.8333333333333">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-84.8348623853211,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-84.8348623853211,0"
-                    Point2="-88.8348623853211,0"
-                    Point3="-88.8348623853211,4" />
-                  <mssgle:LineSegment
-                    End="-88.8348623853211,53.8333333333333" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-88.8348623853211,53.8333333333333"
-                    Point2="-88.8348623853211,57.8333333333333"
-                    Point3="-92.8348623853211,57.8333333333333" />
-                  <mssgle:LineSegment
-                    End="-203,57.8333333333333" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="159,42"
-          Id="Package\Data Flow Task 1\Conditional Split"
-          TopLeft="450,270" />
         <EdgeLayout
           Id="Package\Data Flow Task 1.Paths[Derived Column Output]"
           TopLeft="539.5,234.5">
@@ -2528,40 +2913,36 @@ FROM            cliente AS cli INNER JOIN
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-218.833333333333,49.5"
+              EndConnector="-273.833333333333,56.5"
               Start="0,0"
-              End="-218.833333333333,42">
+              End="-273.833333333333,49">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,16.0958904109589" />
+                    End="0,18.9377334993773" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,16.0958904109589"
-                    Point2="0,20.0958904109589"
-                    Point3="-4,20.0958904109589" />
+                    Point1="0,18.9377334993773"
+                    Point2="0,22.9377334993773"
+                    Point3="-4,22.9377334993773" />
                   <mssgle:LineSegment
-                    End="-214.833333333333,20.0958904109589" />
+                    End="-269.833333333333,22.9377334993773" />
                   <mssgle:CubicBezierSegment
-                    Point1="-214.833333333333,20.0958904109589"
-                    Point2="-218.833333333333,20.0958904109589"
-                    Point3="-218.833333333333,24.0958904109589" />
+                    Point1="-269.833333333333,22.9377334993773"
+                    Point2="-273.833333333333,22.9377334993773"
+                    Point3="-273.833333333333,26.9377334993773" />
                   <mssgle:LineSegment
-                    End="-218.833333333333,42" />
+                    End="-273.833333333333,49" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-178.121217447917,25.0958904109589,137.4091015625,11.7119140625"
+              BoundingBox="-205.621217447917,27.9377334993773,137.4091015625,11.7119140625"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="206,42"
-          Id="Package\Data Flow Task 1\Gubernamental y Turismo"
-          TopLeft="698,369" />
         <EdgeLayout
           Id="Package\Data Flow Task 1.Paths[Cliente Gubernamental y Turismo]"
           TopLeft="554.666666666667,312">
@@ -2598,22 +2979,157 @@ FROM            cliente AS cli INNER JOIN
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task 1.Paths[Aggregate Output 1]"
+          TopLeft="829,155.666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-210.5,57.8333333333333"
+              Start="0,0"
+              End="-203,57.8333333333333">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-84.8348623853211,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-84.8348623853211,0"
+                    Point2="-88.8348623853211,0"
+                    Point3="-88.8348623853211,4" />
+                  <mssgle:LineSegment
+                    End="-88.8348623853211,53.8333333333333" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-88.8348623853211,53.8333333333333"
+                    Point2="-88.8348623853211,57.8333333333333"
+                    Point3="-92.8348623853211,57.8333333333333" />
+                  <mssgle:LineSegment
+                    End="-203,57.8333333333333" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task 1.Paths[ADO NET Source Output]"
+          TopLeft="455,81.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="81.5,41.5"
+              Start="0,0"
+              End="81.5,34">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.75"
+                    Point2="0,20.75"
+                    Point3="4,20.75" />
+                  <mssgle:LineSegment
+                    End="77.5,20.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="77.5,20.75"
+                    Point2="81.5,20.75"
+                    Point3="81.5,24.75" />
+                  <mssgle:LineSegment
+                    End="81.5,34" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="194,42"
+          Id="Package\Data Flow Task 1\Preferencial y Ejecutivo 1"
+          TopLeft="184.5,452" />
+        <EdgeLayout
+          Id="Package\Data Flow Task 1.Paths[Cliente Preferencial y Ejecutivo 2]"
+          TopLeft="529.5,312">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-248,140"
+              Start="0,0"
+              End="-248,132.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,66" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,66"
+                    Point2="0,70"
+                    Point3="-4,70" />
+                  <mssgle:LineSegment
+                    End="-244,70" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-244,70"
+                    Point2="-248,70"
+                    Point3="-248,74" />
+                  <mssgle:LineSegment
+                    End="-248,132.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-196.9186328125,75,145.837265625,11.7119140625"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="206,42"
+          Id="Package\Data Flow Task 1\Gubernamental y Turismo 1"
+          TopLeft="665.5,438" />
+        <EdgeLayout
+          Id="Package\Data Flow Task 1.Paths[Cliente Gubernamental y Turismo 2]"
+          TopLeft="544.6,312">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="223.9,126"
+              Start="0,0"
+              End="223.9,118.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.3891591382905" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,52.3891591382905"
+                    Point2="0,56.3891591382905"
+                    Point3="4,56.3891591382905" />
+                  <mssgle:LineSegment
+                    End="219.9,56.3891591382905" />
+                  <mssgle:CubicBezierSegment
+                    Point1="219.9,56.3891591382905"
+                    Point2="223.9,56.3891591382905"
+                    Point3="223.9,60.3891591382905" />
+                  <mssgle:LineSegment
+                    End="223.9,118.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="33.2413671875,61.3891591382905,157.417265625,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task 1\Preferencial y Ejecutivo">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task 1\Roaming CR">
     <Properties>
@@ -2637,6 +3153,45 @@ FROM            cliente AS cli INNER JOIN
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task 1\Gubernamental y Turismo">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task 1\Preferencial y Ejecutivo">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task 1\Preferencial y Ejecutivo 1">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task 1\Gubernamental y Turismo 1">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
